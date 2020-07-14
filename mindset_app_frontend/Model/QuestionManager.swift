@@ -16,9 +16,6 @@ var savedData = QuestionsModel()
 
 struct QuestionManager {
     var delegate: QuestionManagerDelegate?
-//    var questionsArray: Questions
-//    var questionsModel = QuestionsModel(questions: [QuestionModel]())
-//    var questionsModel: QuestionsModel
     
     func parseJSON(data: Data) -> QuestionsModel? {
         do {
@@ -31,33 +28,28 @@ struct QuestionManager {
         }
     }
     
-    func getData() {
+    func getQuestions() {
         let url = URL(string: "http://localhost:4000/questions")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "GET"
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            print(response!)
-            
             guard let data = data else { return }
-            // Using parseJSON() function to convert data to Swift struct
             let todoItem = self.parseJSON(data: data)
-            
-            if let todoItemModel = todoItem {
-                let goal = todoItemModel.questions.filter { question in
-                    return question.category == "goals"
+
+            if todoItem != nil {
+                self.filterQuestions(category: "message")
                 }
-                print("GOAL: \(goal)")
-                self.delegate?.didUpdateQuestion(questions: goal)
-//                self.delegate?.didUpdateQuestion(questions: todoItemModel.questions)
-            }
         }
         task.resume()
     }
-    
-    func getFirstQuestions() -> Question {
-        return savedData.questions[0]
+
+    func filterQuestions(category: String) {
+        let filteredData = savedData.questions.filter { question in
+            return question.category == category
+        }
+        self.delegate?.didUpdateQuestion(questions: filteredData)
     }
 }
 

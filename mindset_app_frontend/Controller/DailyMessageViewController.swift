@@ -18,29 +18,23 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
         super.viewDidLoad()
         
         questionManager.delegate = self
-        questionManager.getData()
-        // Do any additional setup after loading the view.
+        questionManager.getQuestions()
+    
 //        textView.isScrollEnabled = false
 //        resize(textView: textView)
         }
     
     @IBAction func toNextScreen(_ sender: UIButton) {
-        let result = questionManager.getFirstQuestions()
-        print("HET IS GODVERDOMME GELUKT: \(result)")
+        
     }
     
     func didUpdateQuestion(questions: [Question]) {
-        let goal = questions.filter { question in
-            return question.category == "goals"
-        }
         DispatchQueue.main.async {
-//            self.titleLabel.text = questions[0].question
-            self.titleLabel.text = goal[0].question
+            self.titleLabel.text = questions[0].question
         }
     }
 }
 
-    
 //    fileprivate func resize(textView: UITextView) {
 //        var newFrame = textView.frame
 //        let width = newFrame.size.width
@@ -49,4 +43,3 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
 //        newFrame.size = CGSize(width: width, height: newSize.height)
 //        textView.frame = newFrame
 //    }
-
