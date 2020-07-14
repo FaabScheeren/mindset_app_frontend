@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="91L-FB-iL8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="73H-OE-Gj4">
+            <objects>
+                <tabBarController id="91L-FB-iL8" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xkA-Me-F6a">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.20784313725490194" green="0.69019607843137254" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="selectedImageTintColor" red="0.13333333333333333" green="0.41960784313725491" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="unselectedItemTintColor">
+                                <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0sB-Oa-deW" kind="relationship" relationship="viewControllers" id="eq1-FV-0Dv"/>
+                        <segue destination="PWE-fJ-zZT" kind="relationship" relationship="viewControllers" id="s9V-LZ-7Ft"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sKr-HB-0lJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-278" y="-338"/>
+        </scene>
+        <!--Calendar-->
+        <scene sceneID="0cO-53-ANk">
+            <objects>
+                <navigationController id="PWE-fJ-zZT" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" selectedImage="calendar" id="hNY-NQ-Kje">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="59b-1f-qyx">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="8f9-rW-cOW" kind="relationship" relationship="rootViewController" id="nb4-EG-IFK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6ov-wf-uAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="20"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="brp-7V-FOd">
+            <objects>
+                <navigationController id="0sB-Oa-deW" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" selectedImage="house" id="r0k-kY-968">
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VnW-3K-Eu9">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="MGF-R1-8a3" kind="relationship" relationship="rootViewController" id="IwY-Ak-NFg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7X-Hk-iKB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="858" y="-654"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="TwG-Yb-KPM">
+            <objects>
+                <viewController id="MGF-R1-8a3" customClass="ViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Nmp-cQ-6cU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Ze3-Jh-ogJ" userLabel="Text">
+                                <rect key="frame" x="25" y="158" width="264" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Fabio," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f94-T0-WJW">
+                                        <rect key="frame" x="0.0" y="0.0" width="264" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="go for a growth mindset today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U5y-b5-jcL">
+                                        <rect key="frame" x="0.0" y="46.5" width="264" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="U5y-b5-jcL" firstAttribute="top" secondItem="f94-T0-WJW" secondAttribute="bottom" constant="21" id="JyH-cB-4QN"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="zes-FF-6b3" userLabel="Buttons">
+                                <rect key="frame" x="25" y="497" width="364" height="271"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P9D-GA-u6q">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="atM-yn-Pem"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Daily mindset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToDailyMindset:" destination="MGF-R1-8a3" eventType="touchUpInside" id="YOf-5t-yUZ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6hW-Zn-bPP">
+                                        <rect key="frame" x="0.0" y="72" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="EGL-YH-Eey"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Weekly mindset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ORy-Ac-y5D">
+                                        <rect key="frame" x="0.0" y="144" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Gng-rC-bsh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Monthly mindset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJe-dX-NWs">
+                                        <rect key="frame" x="0.0" y="216" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="QFL-ih-rif"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Learning journal"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo_vector" translatesAutoresizingMaskIntoConstraints="NO" id="mup-q1-QgJ">
+                                <rect key="frame" x="99" y="267" width="216" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="190" id="9g6-uw-5LB"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="zes-FF-6b3" firstAttribute="leading" secondItem="RXN-dm-EeG" secondAttribute="leading" constant="25" id="37p-9G-NBZ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zes-FF-6b3" secondAttribute="bottom" constant="45" id="83d-Lb-fFg"/>
+                            <constraint firstItem="RXN-dm-EeG" firstAttribute="trailing" secondItem="Ze3-Jh-ogJ" secondAttribute="trailing" constant="125" id="StP-mY-DcV"/>
+                            <constraint firstItem="Ze3-Jh-ogJ" firstAttribute="leading" secondItem="RXN-dm-EeG" secondAttribute="leading" constant="25" id="Vpu-2I-gSV"/>
+                            <constraint firstItem="mup-q1-QgJ" firstAttribute="centerX" secondItem="Nmp-cQ-6cU" secondAttribute="centerX" id="aRJ-ue-jMg"/>
+                            <constraint firstItem="Ze3-Jh-ogJ" firstAttribute="top" secondItem="RXN-dm-EeG" secondAttribute="top" constant="70" id="dPy-ui-m4q"/>
+                            <constraint firstItem="zes-FF-6b3" firstAttribute="top" secondItem="mup-q1-QgJ" secondAttribute="bottom" constant="40" id="iNI-FV-lBi"/>
+                            <constraint firstItem="RXN-dm-EeG" firstAttribute="trailing" secondItem="zes-FF-6b3" secondAttribute="trailing" constant="25" id="kMG-xR-W4j"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RXN-dm-EeG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ox0-qv-1DN"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="f94-T0-WJW" id="HXb-a3-EQv"/>
+                        <segue destination="Mre-bR-sP9" kind="show" identifier="ToDailyMindset" id="bXQ-Zz-3vX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ho6-Cb-1ZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750.7246376811595" y="-654.24107142857144"/>
+        </scene>
+        <!--Daily Mindset Overview Controller-->
+        <scene sceneID="RuK-1H-wFB">
+            <objects>
+                <viewController id="Mre-bR-sP9" customClass="DailyMindsetOverviewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xDx-X2-4cg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-BM-ge3" userLabel="Text">
+                                <rect key="frame" x="25" y="158" width="364" height="70"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome Fabio," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wMm-za-5zf">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="25.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="go for a growth mindset today!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X0y-3R-eW8">
+                                        <rect key="frame" x="0.0" y="46.5" width="364" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="X0y-3R-eW8" firstAttribute="top" secondItem="wMm-za-5zf" secondAttribute="bottom" constant="21" id="JZs-ZW-90n"/>
+                                </constraints>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="zfA-VY-jty" userLabel="Buttons">
+                                <rect key="frame" x="25" y="298" width="364" height="126"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTq-jI-vd9">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="too-FA-78m"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Daily morning mindset"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="DailyMessage:" destination="Mre-bR-sP9" eventType="touchUpInside" id="w8H-Gr-9fS"/>
+                                            <action selector="goToDailyMindset:" destination="MGF-R1-8a3" eventType="touchUpInside" id="tAv-Iw-SJ2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fNn-F9-h3d">
+                                        <rect key="frame" x="0.0" y="71" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="8O0-nh-t3W"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Daily evening journal"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="goToDailyMindset:" destination="MGF-R1-8a3" eventType="touchUpInside" id="pHk-H4-CGh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QaJ-BM-ge3" firstAttribute="top" secondItem="iO2-j1-TzO" secondAttribute="top" constant="70" id="6OB-5z-IMu"/>
+                            <constraint firstItem="iO2-j1-TzO" firstAttribute="trailing" secondItem="zfA-VY-jty" secondAttribute="trailing" constant="25" id="HaS-C5-fPC"/>
+                            <constraint firstItem="QaJ-BM-ge3" firstAttribute="leading" secondItem="iO2-j1-TzO" secondAttribute="leading" constant="25" id="J9q-aa-dxK"/>
+                            <constraint firstItem="zfA-VY-jty" firstAttribute="leading" secondItem="iO2-j1-TzO" secondAttribute="leading" constant="25" id="ZOm-y2-d1d"/>
+                            <constraint firstItem="iO2-j1-TzO" firstAttribute="trailing" secondItem="QaJ-BM-ge3" secondAttribute="trailing" constant="25" id="e2r-iO-xRR"/>
+                            <constraint firstItem="zfA-VY-jty" firstAttribute="top" secondItem="QaJ-BM-ge3" secondAttribute="bottom" constant="70" id="pt2-kk-41r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iO2-j1-TzO"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hjm-kq-DS4"/>
+                    <connections>
+                        <segue destination="i5I-5l-gKw" kind="show" identifier="ToMessageScreen" id="f28-5e-96M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QsF-49-T1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2559" y="-654"/>
+        </scene>
+        <!--Daily Message View Controller-->
+        <scene sceneID="PQQ-7E-gjc">
+            <objects>
+                <viewController id="i5I-5l-gKw" customClass="DailyMessageViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GU6-T3-cbQ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="I6T-Jd-KhG" userLabel="Text">
+                                <rect key="frame" x="25" y="158" width="364" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's message to myself:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTx-1I-kHQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="77"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                        <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="tVN-UM-btf">
+                                <rect key="frame" x="25" y="336" width="364" height="40"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="40" id="4AM-J9-HTQ"/>
+                                </constraints>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ET3-QW-BAI">
+                                <rect key="frame" x="337" y="461" width="52" height="42"/>
+                                <color key="backgroundColor" name="Light green"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="bTw-hc-ulE"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="toNextScreen:" destination="i5I-5l-gKw" eventType="touchUpInside" id="p9O-7e-aI6"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2qS-rh-vfe" userLabel="Border Bottom Text View">
+                                <rect key="frame" x="25" y="376" width="364" height="2"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="GQZ-s3-axs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="KB6-f9-Pmz" firstAttribute="trailing" secondItem="tVN-UM-btf" secondAttribute="trailing" constant="25" id="1Ek-mf-gXS"/>
+                            <constraint firstItem="ET3-QW-BAI" firstAttribute="top" secondItem="tVN-UM-btf" secondAttribute="bottom" constant="85" id="1d2-R4-0QF"/>
+                            <constraint firstItem="tVN-UM-btf" firstAttribute="top" secondItem="I6T-Jd-KhG" secondAttribute="bottom" constant="101" id="7MB-dc-jFp"/>
+                            <constraint firstItem="tVN-UM-btf" firstAttribute="leading" secondItem="KB6-f9-Pmz" secondAttribute="leading" constant="25" id="Jbg-0E-kqo"/>
+                            <constraint firstItem="KB6-f9-Pmz" firstAttribute="trailing" secondItem="2qS-rh-vfe" secondAttribute="trailing" constant="25" id="MZT-dI-fGI"/>
+                            <constraint firstItem="I6T-Jd-KhG" firstAttribute="leading" secondItem="KB6-f9-Pmz" secondAttribute="leading" constant="25" id="bEH-cQ-Gxy"/>
+                            <constraint firstItem="2qS-rh-vfe" firstAttribute="top" secondItem="tVN-UM-btf" secondAttribute="bottom" id="gWQ-RC-3Oz"/>
+                            <constraint firstItem="KB6-f9-Pmz" firstAttribute="bottom" secondItem="ET3-QW-BAI" secondAttribute="bottom" constant="310" id="guC-UM-ug4"/>
+                            <constraint firstItem="KB6-f9-Pmz" firstAttribute="trailing" secondItem="I6T-Jd-KhG" secondAttribute="trailing" constant="25" id="lNt-91-YXc"/>
+                            <constraint firstItem="ET3-QW-BAI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="KB6-f9-Pmz" secondAttribute="leading" symbolic="YES" id="oUK-Rs-jTu"/>
+                            <constraint firstItem="I6T-Jd-KhG" firstAttribute="top" secondItem="KB6-f9-Pmz" secondAttribute="top" constant="70" id="rcm-eI-eAR"/>
+                            <constraint firstItem="KB6-f9-Pmz" firstAttribute="trailing" secondItem="ET3-QW-BAI" secondAttribute="trailing" constant="25" id="sBW-FS-9yG"/>
+                            <constraint firstItem="2qS-rh-vfe" firstAttribute="leading" secondItem="KB6-f9-Pmz" secondAttribute="leading" constant="25" id="u6m-3J-DiW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KB6-f9-Pmz"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="3mA-JU-mNX"/>
+                    <connections>
+                        <outlet property="textView" destination="tVN-UM-btf" id="jkZ-M7-2IA"/>
+                        <outlet property="titleLabel" destination="KTx-1I-kHQ" id="3cH-eB-Xqc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UCV-XD-eTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3317" y="-654"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="yD2-EO-Qyf">
+            <objects>
+                <viewController id="8f9-rW-cOW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lxW-UQ-UYd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="CwG-YC-oCo"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="1gN-eN-mOd"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t5F-s5-3Xe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1751" y="19"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo_vector" width="216" height="246"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="house" catalog="system" width="128" height="110"/>
+        <namedColor name="Light green">
+            <color red="0.77300000190734863" green="0.94099998474121094" blue="0.64300000667572021" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

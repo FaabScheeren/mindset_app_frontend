@@ -13,6 +13,11 @@
 		FA07B80B24B73CC500487AFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80924B73CC500487AFA /* Main.storyboard */; };
 		FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80C24B73CC700487AFA /* Assets.xcassets */; };
 		FA07B81024B73CC700487AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80E24B73CC700487AFA /* LaunchScreen.storyboard */; };
+		FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */; };
+		FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECB24BC404A007565AB /* QuestionData.swift */; };
+		FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECD24BC5731007565AB /* QuestionModel.swift */; };
+		FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31F724B840CA00350330 /* DailyMessageViewController.swift */; };
+		FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31FB24B855AD00350330 /* QuestionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		FA07B80C24B73CC700487AFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA07B80F24B73CC700487AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA07B81124B73CC700487AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetOverviewController.swift; sourceTree = "<group>"; };
+		FA7A8ECB24BC404A007565AB /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
+		FA7A8ECD24BC5731007565AB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
+		FABF31F724B840CA00350330 /* DailyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageViewController.swift; sourceTree = "<group>"; };
+		FABF31FB24B855AD00350330 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +68,42 @@
 			children = (
 				FA07B80324B73CC500487AFA /* AppDelegate.swift */,
 				FA07B80524B73CC500487AFA /* SceneDelegate.swift */,
-				FA07B80724B73CC500487AFA /* ViewController.swift */,
-				FA07B80924B73CC500487AFA /* Main.storyboard */,
+				FABF31FD24B855B400350330 /* Model */,
+				FABF31F924B853DA00350330 /* View */,
+				FABF31FA24B853EE00350330 /* Controller */,
 				FA07B80C24B73CC700487AFA /* Assets.xcassets */,
 				FA07B80E24B73CC700487AFA /* LaunchScreen.storyboard */,
 				FA07B81124B73CC700487AFA /* Info.plist */,
 			);
 			path = mindset_app_frontend;
+			sourceTree = "<group>";
+		};
+		FABF31F924B853DA00350330 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FA07B80924B73CC500487AFA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FABF31FA24B853EE00350330 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FA07B80724B73CC500487AFA /* ViewController.swift */,
+				FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */,
+				FABF31F724B840CA00350330 /* DailyMessageViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		FABF31FD24B855B400350330 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FABF31FB24B855AD00350330 /* QuestionManager.swift */,
+				FA7A8ECB24BC404A007565AB /* QuestionData.swift */,
+				FA7A8ECD24BC5731007565AB /* QuestionModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +178,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA07B80824B73CC500487AFA /* ViewController.swift in Sources */,
+				FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */,
+				FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */,
+				FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */,
 				FA07B80424B73CC500487AFA /* AppDelegate.swift in Sources */,
+				FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */,
 				FA07B80624B73CC500487AFA /* SceneDelegate.swift in Sources */,
+				FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +328,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZCDUP5QTS;
 				INFOPLIST_FILE = mindset_app_frontend/Info.plist;
@@ -291,6 +336,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fabioscheeren.mindset-app-frontend";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -302,6 +348,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = JZCDUP5QTS;
 				INFOPLIST_FILE = mindset_app_frontend/Info.plist;
@@ -309,6 +356,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				NEW_SETTING = "";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.fabioscheeren.mindset-app-frontend";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
