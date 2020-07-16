@@ -16,9 +16,11 @@
 		FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */; };
 		FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECB24BC404A007565AB /* QuestionData.swift */; };
 		FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECD24BC5731007565AB /* QuestionModel.swift */; };
-		FA8360BA24BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */; };
+		FA8360BC24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */; };
 		FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31F724B840CA00350330 /* DailyMessageViewController.swift */; };
 		FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31FB24B855AD00350330 /* QuestionManager.swift */; };
+		FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */; };
+		FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,9 +35,11 @@
 		FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetOverviewController.swift; sourceTree = "<group>"; };
 		FA7A8ECB24BC404A007565AB /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		FA7A8ECD24BC5731007565AB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetQuestionViewController.swift; sourceTree = "<group>"; };
+		FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetQuestionViewController.swift; sourceTree = "<group>"; };
 		FABF31F724B840CA00350330 /* DailyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageViewController.swift; sourceTree = "<group>"; };
 		FABF31FB24B855AD00350330 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuestionCell.swift; sourceTree = "<group>"; };
+		FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenQuestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				FA07B80924B73CC500487AFA /* Main.storyboard */,
+				FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */,
+				FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,7 +100,7 @@
 				FA07B80724B73CC500487AFA /* ViewController.swift */,
 				FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */,
 				FABF31F724B840CA00350330 /* DailyMessageViewController.swift */,
-				FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */,
+				FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -170,6 +176,7 @@
 				FA07B81024B73CC700487AFA /* LaunchScreen.storyboard in Resources */,
 				FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */,
 				FA07B80B24B73CC500487AFA /* Main.storyboard in Resources */,
+				FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,8 +194,9 @@
 				FA07B80424B73CC500487AFA /* AppDelegate.swift in Sources */,
 				FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */,
 				FA07B80624B73CC500487AFA /* SceneDelegate.swift in Sources */,
-				FA8360BA24BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */,
+				FA8360BC24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */,
 				FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */,
+				FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

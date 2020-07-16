@@ -393,26 +393,49 @@
                     <connections>
                         <outlet property="textView" destination="tVN-UM-btf" id="jkZ-M7-2IA"/>
                         <outlet property="titleLabel" destination="KTx-1I-kHQ" id="3cH-eB-Xqc"/>
+                        <segue destination="DMO-l0-neG" kind="show" identifier="ToDailyMindsetScreen" id="pRd-hF-9bY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCV-XD-eTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3317" y="-654"/>
         </scene>
-        <!--View Controller-->
+        <!--Daily Mindset Question View Controller-->
         <scene sceneID="2gg-Wk-Qdj">
             <objects>
-                <viewController id="DMO-l0-neG" sceneMemberID="viewController">
+                <viewController id="DMO-l0-neG" customClass="DailyMindsetQuestionViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gpB-qu-d9Z">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Morning mindset" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ak1-Yt-E4Q">
+                                <rect key="frame" x="25" y="158" width="364" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Qbx-EQ-m2L">
+                                <rect key="frame" x="0.0" y="192" width="414" height="621"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ak1-Yt-E4Q" firstAttribute="leading" secondItem="QJv-hQ-hQx" secondAttribute="leading" constant="25" id="dTr-g5-zOa"/>
+                            <constraint firstItem="Ak1-Yt-E4Q" firstAttribute="top" secondItem="QJv-hQ-hQx" secondAttribute="top" constant="70" id="neD-H4-KwM"/>
+                            <constraint firstItem="QJv-hQ-hQx" firstAttribute="trailing" secondItem="Ak1-Yt-E4Q" secondAttribute="trailing" constant="25" id="oGP-YB-5AI"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="QJv-hQ-hQx"/>
                     </view>
+                    <navigationItem key="navigationItem" id="lHq-Wq-fwA"/>
+                    <connections>
+                        <outlet property="tableView" destination="Qbx-EQ-m2L" id="OBj-IR-thl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-0q-a06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4065" y="-654"/>
+            <point key="canvasLocation" x="4063.7681159420295" y="-654.24107142857144"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yD2-EO-Qyf">

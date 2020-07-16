@@ -25,7 +25,7 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
         }
     
     @IBAction func toNextScreen(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
     }
     
     func didUpdateQuestion(questions: [Question]) {
