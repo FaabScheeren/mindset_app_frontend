@@ -19,4 +19,7 @@ class DailyMindsetOverviewController: UIViewController {
             performSegue(withIdentifier: "ToMessageScreen", sender: sender)
     }
     
+    @IBAction func StartDailyJournal(_ sender: UIButton) {
+        
+    }
 }

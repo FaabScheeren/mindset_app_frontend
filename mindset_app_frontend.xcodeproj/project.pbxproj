@@ -14,11 +14,21 @@
 		FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80C24B73CC700487AFA /* Assets.xcassets */; };
 		FA07B81024B73CC700487AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80E24B73CC700487AFA /* LaunchScreen.storyboard */; };
 		FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */; };
+		FA3EFA7224C58DE20093C893 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EFA7124C58DE20093C893 /* GoalManager.swift */; };
+		FA3EFA7424C5B0840093C893 /* CheckQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EFA7324C5B0840093C893 /* CheckQuestionData.swift */; };
+		FA57246A24C176FC0023347A /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57246924C176FC0023347A /* MessageData.swift */; };
+		FA57246C24C179690023347A /* MessageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57246B24C179690023347A /* MessageManager.swift */; };
+		FA57246E24C1A6CA0023347A /* MindsetAnswersData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57246D24C1A6CA0023347A /* MindsetAnswersData.swift */; };
+		FA57247024C1B6350023347A /* MindsetAnswersManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57246F24C1B6350023347A /* MindsetAnswersManager.swift */; };
+		FA57247424C1C2C30023347A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57247324C1C2C30023347A /* Constants.swift */; };
 		FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECB24BC404A007565AB /* QuestionData.swift */; };
 		FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECD24BC5731007565AB /* QuestionModel.swift */; };
-		FA8360BA24BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */; };
+		FA8360BC24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */; };
 		FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31F724B840CA00350330 /* DailyMessageViewController.swift */; };
 		FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31FB24B855AD00350330 /* QuestionManager.swift */; };
+		FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */; };
+		FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */; };
+		FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +41,21 @@
 		FA07B80F24B73CC700487AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA07B81124B73CC700487AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetOverviewController.swift; sourceTree = "<group>"; };
+		FA3EFA7124C58DE20093C893 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
+		FA3EFA7324C5B0840093C893 /* CheckQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckQuestionData.swift; sourceTree = "<group>"; };
+		FA57246924C176FC0023347A /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		FA57246B24C179690023347A /* MessageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageManager.swift; sourceTree = "<group>"; };
+		FA57246D24C1A6CA0023347A /* MindsetAnswersData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindsetAnswersData.swift; sourceTree = "<group>"; };
+		FA57246F24C1B6350023347A /* MindsetAnswersManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MindsetAnswersManager.swift; sourceTree = "<group>"; };
+		FA57247324C1C2C30023347A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA7A8ECB24BC404A007565AB /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		FA7A8ECD24BC5731007565AB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetQuestionViewController.swift; sourceTree = "<group>"; };
+		FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetQuestionViewController.swift; sourceTree = "<group>"; };
 		FABF31F724B840CA00350330 /* DailyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageViewController.swift; sourceTree = "<group>"; };
 		FABF31FB24B855AD00350330 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
+		FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalViewController.swift; sourceTree = "<group>"; };
+		FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuestionCell.swift; sourceTree = "<group>"; };
+		FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenQuestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +96,7 @@
 				FA07B80C24B73CC700487AFA /* Assets.xcassets */,
 				FA07B80E24B73CC700487AFA /* LaunchScreen.storyboard */,
 				FA07B81124B73CC700487AFA /* Info.plist */,
+				FA57247324C1C2C30023347A /* Constants.swift */,
 			);
 			path = mindset_app_frontend;
 			sourceTree = "<group>";
@@ -84,6 +105,8 @@
 			isa = PBXGroup;
 			children = (
 				FA07B80924B73CC500487AFA /* Main.storyboard */,
+				FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */,
+				FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -94,7 +117,8 @@
 				FA07B80724B73CC500487AFA /* ViewController.swift */,
 				FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */,
 				FABF31F724B840CA00350330 /* DailyMessageViewController.swift */,
-				FA8360B924BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift */,
+				FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */,
+				FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -105,6 +129,12 @@
 				FABF31FB24B855AD00350330 /* QuestionManager.swift */,
 				FA7A8ECB24BC404A007565AB /* QuestionData.swift */,
 				FA7A8ECD24BC5731007565AB /* QuestionModel.swift */,
+				FA57246924C176FC0023347A /* MessageData.swift */,
+				FA57246B24C179690023347A /* MessageManager.swift */,
+				FA57246D24C1A6CA0023347A /* MindsetAnswersData.swift */,
+				FA57246F24C1B6350023347A /* MindsetAnswersManager.swift */,
+				FA3EFA7124C58DE20093C893 /* GoalManager.swift */,
+				FA3EFA7324C5B0840093C893 /* CheckQuestionData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +200,7 @@
 				FA07B81024B73CC700487AFA /* LaunchScreen.storyboard in Resources */,
 				FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */,
 				FA07B80B24B73CC500487AFA /* Main.storyboard in Resources */,
+				FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -180,15 +211,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA57246A24C176FC0023347A /* MessageData.swift in Sources */,
+				FA3EFA7424C5B0840093C893 /* CheckQuestionData.swift in Sources */,
 				FA07B80824B73CC500487AFA /* ViewController.swift in Sources */,
 				FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */,
+				FA57246C24C179690023347A /* MessageManager.swift in Sources */,
+				FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */,
+				FA57247024C1B6350023347A /* MindsetAnswersManager.swift in Sources */,
+				FA57247424C1C2C30023347A /* Constants.swift in Sources */,
 				FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */,
+				FA57246E24C1A6CA0023347A /* MindsetAnswersData.swift in Sources */,
 				FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */,
 				FA07B80424B73CC500487AFA /* AppDelegate.swift in Sources */,
+				FA3EFA7224C58DE20093C893 /* GoalManager.swift in Sources */,
 				FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */,
 				FA07B80624B73CC500487AFA /* SceneDelegate.swift in Sources */,
-				FA8360BA24BDA7C50069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */,
+				FA8360BC24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */,
 				FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */,
+				FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

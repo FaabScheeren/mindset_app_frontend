@@ -17,12 +17,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "ToDailyMindset" {
-//            if let destinationVC = segue.destination as? DailyMindsetOverviewController {
-//            }
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        self.hidesBottomBarWhenPushed = true
+    }
     
     @IBAction func goToDailyMindset(_ sender: UIButton) {
         performSegue(withIdentifier: "ToDailyMindset", sender: sender)
