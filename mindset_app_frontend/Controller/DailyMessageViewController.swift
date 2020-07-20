@@ -11,8 +11,10 @@ import UIKit
 class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var errorLabel: UILabel!
     
     var questionManager = QuestionManager()
+    var messageManager = MessageManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,17 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
         }
     
     @IBAction func toNextScreen(_ sender: UIButton) {
-        performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+        if !textView.text.isEmpty {
+            messageManager.saveMessage(data: textView.text, finished: {(succes) -> Void in
+                if(succes) {
+                    DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                    }
+                }
+            })
+        } else {
+            errorLabel.text = "Place fill in your daily message."
+        }
     }
     
     func didUpdateQuestion(questions: [Question]) {

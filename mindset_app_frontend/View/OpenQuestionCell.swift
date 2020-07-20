@@ -11,20 +11,15 @@ import UIKit
 class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var questionInputField: UITextView!
-    @IBOutlet weak var textViewHeight: NSLayoutConstraint!
     
     var textChanged: ((String) -> Void)?
+    var indexOfCell: Int = 0
+    var id: String = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
         questionInputField.delegate = self
     }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
     
     func textChanged(action: @escaping (String) -> Void) {
         self.textChanged = action
@@ -33,13 +28,16 @@ class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         textChanged?(textView.text)
     }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        mindsetAnswers[indexOfCell].answer = textView.text
+    }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        // reset (hide) the checkmark label
+        self.questionInputField.text = ""
 
+    }
 }
-
-//extension OpenQuestionCell: UITextViewDelegate {
-//    func textViewDidChange(_ textView: UITextView) {
-//
-//    }
-//}
-
-
