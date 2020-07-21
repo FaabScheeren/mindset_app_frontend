@@ -36,7 +36,7 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
                 }
             })
         } else {
-            errorLabel.text = "Place fill in your daily message."
+            errorLabel.text = "Please fill in your daily message."
         }
     }
     
