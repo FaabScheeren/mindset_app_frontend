@@ -13,12 +13,19 @@ struct CheckQuestionData: Encodable {
     var done: Bool?
 }
 
-
-struct CheckQuestionResponse: Decodable {
-    var goals: [GoalsData]
+struct GoalResponse: Decodable {
+    var goals: [CheckQuestionDataResponse]
 }
 
-struct GoalsData: Decodable {
+struct TaskResponse: Decodable {
+    var tasks: [CheckQuestionDataResponse]
+}
+
+struct PersonResponse: Decodable {
+    var peopleToConnect: [CheckQuestionDataResponse]
+}
+
+struct CheckQuestionDataResponse: Decodable {
     var title: String
     var done: Bool
 }

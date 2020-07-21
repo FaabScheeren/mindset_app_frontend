@@ -33,9 +33,9 @@ class DailyGoalViewController: UIViewController, UITextViewDelegate {
         goalManager.saveGoal(with: Goals) { (succes) in
             if (succes) {
                 print("Finished!")
-//                DispatchQueue.main.async {
-//                self.performSegue(withIdentifier: "ToGoalScreen", sender: sender)
-//                }
+                DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "ToTaskScreen", sender: sender)
+                }
             } else {
 //                errorLabel.text = "Something went wrong sorry."
                 print("Error")
@@ -43,7 +43,7 @@ class DailyGoalViewController: UIViewController, UITextViewDelegate {
         }
     }
     
-    func textViewDidEndEditing(_ textView: UITextView) {
+    func textViewDidChange(_ textView: UITextView) {
         print(textView)
         if textView == FirstGoal {
             Goals[0] = (CheckQuestionData(title: FirstGoal.text, done: false))
