@@ -45,7 +45,7 @@ struct GoalManager {
             }
             
             do {
-                let savedGoals = try JSONDecoder().decode(CheckQuestionResponse.self, from: data)
+                let savedGoals = try JSONDecoder().decode(GoalResponse.self, from: data)
                 print("Response data:\n \(savedGoals)")
             } catch let jsonErr {
                 print("\(jsonErr)")
