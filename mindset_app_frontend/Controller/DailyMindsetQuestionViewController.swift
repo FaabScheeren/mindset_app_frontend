@@ -75,16 +75,11 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
             tableView?.beginUpdates()
             tableView?.endUpdates()
         }
-        
-//        // Appending a struct to the answer array
-//        let answer = MindsetAnswersData(question: country._id, answer: "")
-//        mindsetAnswers.append(answer)
-        
+
         if(mindsetAnswers[indexPath.row].answer != "") {
             cell.questionInputField.text = mindsetAnswers[indexPath.row].answer
         }
         
-//        print(mindsetAnswers)
         return cell
     }
 }
