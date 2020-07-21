@@ -16,10 +16,10 @@ class DailyMindsetOverviewController: UIViewController {
     }
 
     @IBAction func DailyMessage(_ sender: UIButton) {
-            performSegue(withIdentifier: "ToMessageScreen", sender: sender)
+        performSegue(withIdentifier: "ToMessageScreen", sender: sender)
     }
     
     @IBAction func StartDailyJournal(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "ToDailyOverViewScreen", sender: sender)
     }
 }
