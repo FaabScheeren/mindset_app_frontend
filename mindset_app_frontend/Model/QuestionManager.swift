@@ -28,7 +28,7 @@ struct QuestionManager {
         }
     }
     
-    func getQuestions() {
+    func getQuestions(finished: @escaping (Bool) -> ()) {
         let url = URL(string: "http://localhost:4000/questions")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
@@ -40,7 +40,9 @@ struct QuestionManager {
 
             if todoItem != nil {
                 self.filterQuestions(category: "message")
-                }
+            }
+//            print(todoItem)
+            finished(true)
         }
         task.resume()
     }

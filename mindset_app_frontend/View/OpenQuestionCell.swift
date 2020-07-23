@@ -27,9 +27,6 @@ class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
     
     func textViewDidChange(_ textView: UITextView) {
         textChanged?(textView.text)
-    }
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
         mindsetAnswers[indexOfCell].answer = textView.text
     }
     

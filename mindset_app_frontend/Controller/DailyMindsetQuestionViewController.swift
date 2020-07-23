@@ -16,9 +16,10 @@ var mindsetQuestions = [Question]()
 var mindsetAnswers = [MindsetAnswersData]()
 var mindsetAnswersManager = MindsetAnswersManager()
 
-
 class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
     @IBOutlet weak var tableView: UITableView!
+    
+    var isUnwind: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,11 +38,18 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    // MARK: - Navigation
     @IBAction func saveMindsetAnswers(_ sender: UIButton) {
         mindsetAnswersManager.saveAnswers(with: mindsetAnswers) { (succes) in
             if (succes) {
-                DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "ToGoalScreen", sender: sender)
+                if (self.isUnwind) {
+                    DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "FromMindsetToOverview", sender: sender)
+                    }
+                } else {
+                    DispatchQueue.main.async {
+                    self.performSegue(withIdentifier: "ToGoalScreen", sender: sender)
+                    }
                 }
             } else {
 //                errorLabel.text = "Something went wrong sorry."
@@ -49,7 +57,12 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
             }
         }
     }
+    
+    @IBAction func unwindToDailyMindset( _ seg: UIStoryboardSegue) {
+        isUnwind = true
+    }
 
+    // MARK: - Tableview
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewWillLayoutSubviews()
     }
@@ -75,16 +88,11 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
             tableView?.beginUpdates()
             tableView?.endUpdates()
         }
-        
-//        // Appending a struct to the answer array
-//        let answer = MindsetAnswersData(question: country._id, answer: "")
-//        mindsetAnswers.append(answer)
-        
+
         if(mindsetAnswers[indexPath.row].answer != "") {
             cell.questionInputField.text = mindsetAnswers[indexPath.row].answer
         }
         
-//        print(mindsetAnswers)
         return cell
     }
 }

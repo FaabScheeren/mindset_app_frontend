@@ -12,14 +12,13 @@ class DailyMindsetOverviewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func DailyMessage(_ sender: UIButton) {
-            performSegue(withIdentifier: "ToMessageScreen", sender: sender)
+        performSegue(withIdentifier: "ToMessageScreen", sender: sender)
     }
     
     @IBAction func StartDailyJournal(_ sender: UIButton) {
-        
+        performSegue(withIdentifier: "ToJournalScreen", sender: sender)
     }
 }

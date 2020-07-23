@@ -1,14 +1,14 @@
 //
-//  GoalManager.swift
+//  TaskManager.swift
 //  mindset_app_frontend
 //
-//  Created by Fabio Scheeren on 20/07/2020.
+//  Created by Fabio Scheeren on 21/07/2020.
 //  Copyright © 2020 Fabio Scheeren. All rights reserved.
 //
 
 import Foundation
 
-struct GoalManager {
+struct TaskManager {
     func encodeJSON(with answers: [CheckQuestionData]) -> Data? {
         do {
             let jsonData = try JSONEncoder().encode(answers)
@@ -18,10 +18,10 @@ struct GoalManager {
             return nil
         }
     }
-    
-    func saveGoal(with data: [CheckQuestionData], finished: @escaping (Bool) -> ()) {
-        let url = URL(string: "http://localhost:4000/daily_mindset/goals/\(Constants.currentMindsetId)")!
-//        let url = URL(string: "http://localhost:4000/daily_mindset/goals/5f154da22afcd10a51718ac0")!
+        
+    func saveTask(with data: [CheckQuestionData], finished: @escaping (Bool) -> ()) {
+        let url = URL(string: "http://localhost:4000/daily_mindset/tasks/\(Constants.currentMindsetId)")!
+//        let url = URL(string: "http://localhost:4000/daily_mindset/tasks/5f154da22afcd10a51718ac0")!
         //create the session object
         let session = URLSession.shared
         //now create the URLRequest object using the url object
@@ -45,8 +45,8 @@ struct GoalManager {
             }
             
             do {
-                let savedGoals = try JSONDecoder().decode(GoalResponse.self, from: data)
-                print("Response data:\n \(savedGoals)")
+                let savedTasks = try JSONDecoder().decode(TaskResponse.self, from: data)
+                print("Response data:\n \(savedTasks)")
             } catch let jsonErr {
                 print("\(jsonErr)")
             }
