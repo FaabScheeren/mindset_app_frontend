@@ -23,7 +23,13 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
         super.viewDidLoad()
         
         questionManager.delegate = self
-        questionManager.getQuestions()
+        questionManager.getQuestions() {(succes) in
+            if (succes) {
+                print("Finished")
+            } else {
+                print("Error")
+            }
+        }
     
 //        textView.isScrollEnabled = false
 //        resize(textView: textView)

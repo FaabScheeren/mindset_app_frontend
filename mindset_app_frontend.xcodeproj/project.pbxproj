@@ -29,6 +29,7 @@
 		FA830F2E24C6E21C00582F2F /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2D24C6E21C00582F2F /* PersonManager.swift */; };
 		FA830F3024C6E76100582F2F /* DailyOverViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2F24C6E76100582F2F /* DailyOverViewViewController.swift */; };
 		FA8360BC24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */; };
+		FA9591EA24C9AE5000C3EBC5 /* DailyJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9591E924C9AE5000C3EBC5 /* DailyJournalViewController.swift */; };
 		FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31F724B840CA00350330 /* DailyMessageViewController.swift */; };
 		FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31FB24B855AD00350330 /* QuestionManager.swift */; };
 		FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */; };
@@ -61,6 +62,7 @@
 		FA830F2D24C6E21C00582F2F /* PersonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
 		FA830F2F24C6E76100582F2F /* DailyOverViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyOverViewViewController.swift; sourceTree = "<group>"; };
 		FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetQuestionViewController.swift; sourceTree = "<group>"; };
+		FA9591E924C9AE5000C3EBC5 /* DailyJournalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalViewController.swift; sourceTree = "<group>"; };
 		FABF31F724B840CA00350330 /* DailyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageViewController.swift; sourceTree = "<group>"; };
 		FABF31FB24B855AD00350330 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				FA830F2524C6CF1500582F2F /* DailyTasksViewController.swift */,
 				FA830F2B24C6DDCC00582F2F /* DailyPeopleViewController.swift */,
 				FA830F2F24C6E76100582F2F /* DailyOverViewViewController.swift */,
+				FA9591E924C9AE5000C3EBC5 /* DailyJournalViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -242,6 +245,7 @@
 				FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */,
 				FA57246E24C1A6CA0023347A /* MindsetAnswersData.swift in Sources */,
 				FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */,
+				FA9591EA24C9AE5000C3EBC5 /* DailyJournalViewController.swift in Sources */,
 				FA07B80424B73CC500487AFA /* AppDelegate.swift in Sources */,
 				FA3EFA7224C58DE20093C893 /* GoalManager.swift in Sources */,
 				FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */,

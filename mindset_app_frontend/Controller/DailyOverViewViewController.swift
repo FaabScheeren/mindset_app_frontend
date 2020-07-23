@@ -36,6 +36,16 @@ class DailyOverViewViewController: UIViewController {
         performSegue(withIdentifier: "BackToPerson", sender: sender)
     }
     
+    @IBAction func backToHome(_ sender: UIButton) {
+//        performSegue(withIdentifier: "BackFromDailyOverviewToHome", sender: sender)
+        self.navigationController?.popToRootViewController(animated: true)
+//        self.view.window?.rootViewController?.dismiss(animated: true, completion: nil)
+//        print("Stop! Hou op!")
+    }
     
+    
+//    @IBAction func FinishMindset(_ sender: UIButton) {
+//        performSegue(withIdentifier: "FromDailyOverviewToHome", sender: sender)
+//    }
     
 }

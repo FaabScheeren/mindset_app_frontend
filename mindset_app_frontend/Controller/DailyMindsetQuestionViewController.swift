@@ -38,6 +38,7 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    // MARK: - Navigation
     @IBAction func saveMindsetAnswers(_ sender: UIButton) {
         mindsetAnswersManager.saveAnswers(with: mindsetAnswers) { (succes) in
             if (succes) {
@@ -61,6 +62,7 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
         isUnwind = true
     }
 
+    // MARK: - Tableview
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewWillLayoutSubviews()
     }

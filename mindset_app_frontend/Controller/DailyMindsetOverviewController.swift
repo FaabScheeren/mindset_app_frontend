@@ -12,7 +12,6 @@ class DailyMindsetOverviewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
 
     @IBAction func DailyMessage(_ sender: UIButton) {
@@ -20,6 +19,6 @@ class DailyMindsetOverviewController: UIViewController {
     }
     
     @IBAction func StartDailyJournal(_ sender: UIButton) {
-        performSegue(withIdentifier: "ToDailyOverViewScreen", sender: sender)
+        performSegue(withIdentifier: "ToJournalScreen", sender: sender)
     }
 }

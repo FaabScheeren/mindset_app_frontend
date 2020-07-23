@@ -51,7 +51,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6ov-wf-uAN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="858" y="20"/>
+            <point key="canvasLocation" x="858" y="216"/>
         </scene>
         <!--Home-->
         <scene sceneID="brp-7V-FOd">
@@ -213,7 +213,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ho6-Cb-1ZW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1750.7246376811595" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="1751" y="-654"/>
         </scene>
         <!--Daily Mindset Overview Controller-->
         <scene sceneID="RuK-1H-wFB">
@@ -310,11 +310,12 @@
                     <navigationItem key="navigationItem" id="Hjm-kq-DS4"/>
                     <connections>
                         <segue destination="i5I-5l-gKw" kind="show" identifier="ToMessageScreen" id="f28-5e-96M"/>
+                        <segue destination="30x-nj-nCq" kind="show" identifier="ToJournalScreen" id="NBM-cV-SPb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsF-49-T1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2559" y="-654"/>
+            <point key="canvasLocation" x="2552" y="-654"/>
         </scene>
         <!--Daily Message View Controller-->
         <scene sceneID="PQQ-7E-gjc">
@@ -410,7 +411,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCV-XD-eTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3317" y="-654"/>
+            <point key="canvasLocation" x="3362" y="-1128"/>
         </scene>
         <!--Daily Mindset Question View Controller-->
         <scene sceneID="2gg-Wk-Qdj">
@@ -496,7 +497,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-0q-a06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4063.7681159420295" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="4110" y="-1128"/>
         </scene>
         <!--Daily Goal View Controller-->
         <scene sceneID="Mg0-Hh-74C">
@@ -697,7 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaX-NA-DNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4831.884057971015" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="4878" y="-1128"/>
         </scene>
         <!--Daily Tasks View Controller-->
         <scene sceneID="GFO-3q-Of0">
@@ -889,7 +890,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgT-fq-rOv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5598.5507246376819" y="-654.24107142857144"/>
+            <point key="canvasLocation" x="5645" y="-1128"/>
         </scene>
         <!--Daily People View Controller-->
         <scene sceneID="kdC-Pp-cnS">
@@ -1081,7 +1082,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kd-tH-MQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6351" y="-654"/>
+            <point key="canvasLocation" x="6397" y="-1128"/>
         </scene>
         <!--Daily Over View View Controller-->
         <scene sceneID="qTh-E1-4b0">
@@ -1229,10 +1230,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="GoToDailyOverviewScreen:" destination="AWP-iB-roQ" eventType="touchUpInside" id="9Cs-c8-olb"/>
-                                    <action selector="ToPersonScreen:" destination="z6M-Wj-mgs" eventType="touchUpInside" id="wpE-Kc-BTv"/>
-                                    <action selector="ToTaskScreen:" destination="UPB-re-rAw" eventType="touchUpInside" id="LkW-HJ-gG0"/>
-                                    <action selector="toNextScreen:" destination="i5I-5l-gKw" eventType="touchUpInside" id="rlf-dm-4nC"/>
+                                    <action selector="backToHome:" destination="r8T-TG-J0e" eventType="touchUpInside" id="hWq-7E-Rdw"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -1262,7 +1260,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg0-ly-2n3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="4d9-YL-vtV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="7100" y="-654"/>
+            <point key="canvasLocation" x="7146" y="-1128"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="yD2-EO-Qyf">
@@ -1278,11 +1276,95 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t5F-s5-3Xe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1751" y="19"/>
+            <point key="canvasLocation" x="1751" y="215"/>
+        </scene>
+        <!--Daily Journal View Controller-->
+        <scene sceneID="yk9-BZ-VCt">
+            <objects>
+                <viewController id="30x-nj-nCq" customClass="DailyJournalViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="peP-89-5aJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Evening journal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lI5-R5-loE">
+                                <rect key="frame" x="25" y="158" width="364" height="25"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-wg-V3Z" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="198" width="414" height="614.5"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gOr-Gy-wOp">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="614.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="rQ2-PQ-Y95" userLabel="Footer View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7U-Em-KzW">
+                                                    <rect key="frame" x="337" y="1" width="52" height="42"/>
+                                                    <color key="backgroundColor" name="Light green"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="odW-g7-Oim"/>
+                                                    </constraints>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    <state key="normal" title="Next">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="saveMindsetAnswers:" destination="DMO-l0-neG" eventType="touchUpInside" id="mqA-S7-Oua"/>
+                                                        <action selector="toNextScreen:" destination="i5I-5l-gKw" eventType="touchUpInside" id="mqk-eY-yc3"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstItem="M7U-Em-KzW" firstAttribute="centerY" secondItem="rQ2-PQ-Y95" secondAttribute="centerY" id="Hxo-3l-icS"/>
+                                                <constraint firstAttribute="trailing" secondItem="M7U-Em-KzW" secondAttribute="trailing" constant="25" id="YZQ-5m-BNp"/>
+                                                <constraint firstItem="M7U-Em-KzW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="rQ2-PQ-Y95" secondAttribute="leading" constant="20" symbolic="YES" id="p9d-Dg-9UJ"/>
+                                            </constraints>
+                                        </view>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="gOr-Gy-wOp" secondAttribute="trailing" id="KQv-pY-Icj"/>
+                                    <constraint firstAttribute="bottom" secondItem="gOr-Gy-wOp" secondAttribute="bottom" id="d5K-3A-3Qv"/>
+                                    <constraint firstItem="gOr-Gy-wOp" firstAttribute="top" secondItem="iWC-wg-V3Z" secondAttribute="top" id="pCv-5H-OSO"/>
+                                    <constraint firstItem="gOr-Gy-wOp" firstAttribute="leading" secondItem="iWC-wg-V3Z" secondAttribute="leading" id="srk-Dp-3FE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="iWC-wg-V3Z" secondAttribute="trailing" id="6Ib-a2-PAf"/>
+                            <constraint firstItem="iWC-wg-V3Z" firstAttribute="top" secondItem="lI5-R5-loE" secondAttribute="bottom" constant="15" id="GPl-6N-v9m"/>
+                            <constraint firstItem="iWC-wg-V3Z" firstAttribute="leading" secondItem="w0N-2z-uRY" secondAttribute="leading" id="QC4-S4-6ZQ"/>
+                            <constraint firstItem="w0N-2z-uRY" firstAttribute="trailing" secondItem="lI5-R5-loE" secondAttribute="trailing" constant="25" id="WfN-u0-spw"/>
+                            <constraint firstItem="w0N-2z-uRY" firstAttribute="bottom" secondItem="iWC-wg-V3Z" secondAttribute="bottom" constant="0.5" id="lFQ-Lk-MnA"/>
+                            <constraint firstItem="lI5-R5-loE" firstAttribute="leading" secondItem="w0N-2z-uRY" secondAttribute="leading" constant="25" id="uxj-ri-st9"/>
+                            <constraint firstItem="lI5-R5-loE" firstAttribute="top" secondItem="w0N-2z-uRY" secondAttribute="top" constant="70" id="vhT-LA-0ce"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="w0N-2z-uRY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="tdF-CC-OwE"/>
+                    <connections>
+                        <outlet property="tableView" destination="gOr-Gy-wOp" id="ezS-Gq-fVh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lgn-9O-b4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3362" y="-445"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="YjK-Oy-Mvb"/>
+        <segue reference="Bmo-Wk-DCB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_vector" width="216" height="246"/>
