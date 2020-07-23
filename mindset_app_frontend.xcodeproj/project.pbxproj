@@ -23,7 +23,7 @@
 		FA57247424C1C2C30023347A /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57247324C1C2C30023347A /* Constants.swift */; };
 		FA7A8ECC24BC404A007565AB /* QuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECB24BC404A007565AB /* QuestionData.swift */; };
 		FA7A8ECE24BC5731007565AB /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7A8ECD24BC5731007565AB /* QuestionModel.swift */; };
-		FA830F2624C6CF1500582F2F /* DailyTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2524C6CF1500582F2F /* DailyTaskViewController.swift */; };
+		FA830F2624C6CF1500582F2F /* DailyTasksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2524C6CF1500582F2F /* DailyTasksViewController.swift */; };
 		FA830F2824C6D45D00582F2F /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2724C6D45D00582F2F /* TaskManager.swift */; };
 		FA830F2C24C6DDCC00582F2F /* DailyPeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2B24C6DDCC00582F2F /* DailyPeopleViewController.swift */; };
 		FA830F2E24C6E21C00582F2F /* PersonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA830F2D24C6E21C00582F2F /* PersonManager.swift */; };
@@ -55,7 +55,7 @@
 		FA57247324C1C2C30023347A /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		FA7A8ECB24BC404A007565AB /* QuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionData.swift; sourceTree = "<group>"; };
 		FA7A8ECD24BC5731007565AB /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
-		FA830F2524C6CF1500582F2F /* DailyTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTaskViewController.swift; sourceTree = "<group>"; };
+		FA830F2524C6CF1500582F2F /* DailyTasksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyTasksViewController.swift; sourceTree = "<group>"; };
 		FA830F2724C6D45D00582F2F /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 		FA830F2B24C6DDCC00582F2F /* DailyPeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyPeopleViewController.swift; sourceTree = "<group>"; };
 		FA830F2D24C6E21C00582F2F /* PersonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonManager.swift; sourceTree = "<group>"; };
@@ -129,7 +129,7 @@
 				FABF31F724B840CA00350330 /* DailyMessageViewController.swift */,
 				FA8360BB24BDB2840069DEB5 /* DailyMindsetQuestionViewController.swift */,
 				FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */,
-				FA830F2524C6CF1500582F2F /* DailyTaskViewController.swift */,
+				FA830F2524C6CF1500582F2F /* DailyTasksViewController.swift */,
 				FA830F2B24C6DDCC00582F2F /* DailyPeopleViewController.swift */,
 				FA830F2F24C6E76100582F2F /* DailyOverViewViewController.swift */,
 			);
@@ -235,7 +235,7 @@
 				FA07B80824B73CC500487AFA /* ViewController.swift in Sources */,
 				FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */,
 				FA57246C24C179690023347A /* MessageManager.swift in Sources */,
-				FA830F2624C6CF1500582F2F /* DailyTaskViewController.swift in Sources */,
+				FA830F2624C6CF1500582F2F /* DailyTasksViewController.swift in Sources */,
 				FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */,
 				FA57247024C1B6350023347A /* MindsetAnswersManager.swift in Sources */,
 				FA57247424C1C2C30023347A /* Constants.swift in Sources */,

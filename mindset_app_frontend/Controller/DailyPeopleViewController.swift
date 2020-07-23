@@ -15,6 +15,8 @@ class DailyPeopleViewController: UIViewController {
     @IBOutlet weak var SecondPerson: UITextView!
     @IBOutlet weak var ThirdPerson: UITextView!
     
+//    var isUnwind: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -31,16 +33,25 @@ class DailyPeopleViewController: UIViewController {
         print("Tasks: \(Tasks)")
             personManager.savePersons(with: Persons) { (succes) in
                 if (succes) {
-                    print("Finished!")
-                    DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "ToPersonScreen", sender: sender)
-                    }
+//                    if (self.isUnwind) {
+//                        DispatchQueue.main.async {
+//                        self.performSegue(withIdentifier: "FromDailyPeopleToOverview", sender: sender)
+//                        }
+//                    } else {
+                        DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ToMindsetOverviewScreen", sender: sender)
+                        }
+//                    }
                 } else {
     //                errorLabel.text = "Something went wrong sorry."
                     print("Error")
                 }
             }
     }
+    
+    @IBAction func unwindToPeople( _ seg: UIStoryboardSegue) {
+    }
+    
 }
 
 extension DailyPeopleViewController: UITextViewDelegate {

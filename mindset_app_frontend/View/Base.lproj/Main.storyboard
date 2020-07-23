@@ -310,7 +310,6 @@
                     <navigationItem key="navigationItem" id="Hjm-kq-DS4"/>
                     <connections>
                         <segue destination="i5I-5l-gKw" kind="show" identifier="ToMessageScreen" id="f28-5e-96M"/>
-                        <segue destination="r8T-TG-J0e" kind="show" identifier="ToDailyOverViewScreen" id="eP6-2w-Tdg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QsF-49-T1W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -406,6 +405,7 @@
                         <outlet property="textView" destination="tVN-UM-btf" id="jkZ-M7-2IA"/>
                         <outlet property="titleLabel" destination="KTx-1I-kHQ" id="3cH-eB-Xqc"/>
                         <segue destination="DMO-l0-neG" kind="show" identifier="ToDailyMindsetScreen" id="pRd-hF-9bY"/>
+                        <segue destination="r8T-TG-J0e" kind="show" identifier="FromDailyMessageToOverview" id="oPp-xQ-Ckc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UCV-XD-eTR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -491,6 +491,7 @@
                     <connections>
                         <outlet property="tableView" destination="Qbx-EQ-m2L" id="OBj-IR-thl"/>
                         <segue destination="UPB-re-rAw" kind="show" identifier="ToGoalScreen" id="ylr-rJ-I5e"/>
+                        <segue destination="r8T-TG-J0e" kind="show" identifier="FromMindsetToOverview" id="Bmo-Wk-DCB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JVb-0q-a06" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -508,7 +509,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="1dz-3t-rFi" userLabel="Text">
                                 <rect key="frame" x="25" y="158" width="364" height="77"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's message to myself:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-UI-vUn">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today's top 3 goals/priorities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wug-UI-vUn">
                                         <rect key="frame" x="0.0" y="0.0" width="364" height="77"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="77" id="93w-Tx-Z9U"/>
@@ -533,8 +534,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="ToTaskScreen:" destination="UPB-re-rAw" eventType="touchUpInside" id="UaC-4m-ZVE"/>
-                                    <action selector="toNextScreen:" destination="i5I-5l-gKw" eventType="touchUpInside" id="hvx-J8-z5A"/>
-                                    <segue destination="z6M-Wj-mgs" kind="show" identifier="ToTaskScreen" id="o8d-1K-GDR"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iVG-tK-u6Y" userLabel="First">
@@ -692,16 +691,18 @@
                         <outlet property="FirstGoal" destination="Z0F-gW-A2X" id="4LE-32-u8H"/>
                         <outlet property="SecondGoal" destination="qym-ve-sDg" id="l1E-hv-aum"/>
                         <outlet property="ThirdGoal" destination="FNO-Gm-X4v" id="Pdn-CN-eBx"/>
+                        <segue destination="z6M-Wj-mgs" kind="show" identifier="ToTaskScreen" id="4VB-4Q-Y9w"/>
+                        <segue destination="r8T-TG-J0e" kind="show" identifier="FromDailyGoalsToOverview" id="GYw-xL-eCd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qaX-NA-DNl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4831.884057971015" y="-654.24107142857144"/>
         </scene>
-        <!--Daily Task View Controller-->
+        <!--Daily Tasks View Controller-->
         <scene sceneID="GFO-3q-Of0">
             <objects>
-                <viewController id="z6M-Wj-mgs" customClass="DailyTaskViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z6M-Wj-mgs" customClass="DailyTasksViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GMf-Oj-C9u">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -883,6 +884,7 @@
                         <outlet property="SecondTask" destination="mRM-iX-Bzm" id="zaf-ZL-hhR"/>
                         <outlet property="ThirdTask" destination="0MF-mN-GA7" id="d6O-7r-ou5"/>
                         <segue destination="AWP-iB-roQ" kind="show" identifier="ToPersonScreen" id="RFc-Yp-zhT"/>
+                        <segue destination="r8T-TG-J0e" kind="show" identifier="FromDailyTasksToOverview" id="keh-rB-Me4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pgT-fq-rOv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1074,6 +1076,7 @@
                         <outlet property="FirstPerson" destination="lGq-8X-ajh" id="b78-Vj-B29"/>
                         <outlet property="SecondPerson" destination="p78-9i-9sU" id="6zT-le-VDa"/>
                         <outlet property="ThirdPerson" destination="6KI-dg-irv" id="07F-Gz-zxP"/>
+                        <segue destination="r8T-TG-J0e" kind="show" identifier="ToMindsetOverviewScreen" id="YjK-Oy-Mvb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4kd-tH-MQu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1119,6 +1122,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="BackToDailyMessage:" destination="r8T-TG-J0e" eventType="touchUpInside" id="nfM-Hc-Zfx"/>
                                             <action selector="goToDailyMindset:" destination="MGF-R1-8a3" eventType="touchUpInside" id="rFy-77-iYw"/>
                                         </connections>
                                     </button>
@@ -1140,6 +1144,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BackToDailyMindset:" destination="r8T-TG-J0e" eventType="touchUpInside" id="3Wd-Aj-xGX"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gK-hA-Uy5">
                                         <rect key="frame" x="0.0" y="144" width="364" height="55"/>
@@ -1159,6 +1166,9 @@
                                                 <real key="value" value="10"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BackToDailyGoal:" destination="r8T-TG-J0e" eventType="touchUpInside" id="FoQ-zs-DFd"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9ll-OF-naL">
                                         <rect key="frame" x="0.0" y="216" width="364" height="55"/>
@@ -1242,14 +1252,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="cst-H6-VDs"/>
                     <connections>
-                        <segue destination="AWP-iB-roQ" kind="show" identifier="BackToPersonScreen" id="0Hr-Th-ZyO"/>
-                        <segue destination="z6M-Wj-mgs" kind="show" identifier="BackToTaskScreen" id="Apy-AJ-CtX"/>
-                        <segue destination="UPB-re-rAw" kind="show" identifier="BackToGoalScreen" id="nAu-1a-JDr"/>
-                        <segue destination="DMO-l0-neG" kind="show" identifier="BackToMindsetScreen" id="a1Z-YM-O0W"/>
-                        <segue destination="i5I-5l-gKw" kind="show" identifier="BackToTodayMessageScreen" id="frb-mg-61w"/>
+                        <segue destination="4d9-YL-vtV" kind="unwind" identifier="BackToDailyMessage" unwindAction="unwindToDailyMessage:" id="qVQ-xa-uVU"/>
+                        <segue destination="4d9-YL-vtV" kind="unwind" identifier="BackToDailyMindset" unwindAction="unwindToDailyMindset:" id="Mj6-St-IrZ"/>
+                        <segue destination="4d9-YL-vtV" kind="unwind" identifier="BackToDailyGoal" unwindAction="unwindToGoal:" id="JPN-kJ-96b"/>
+                        <segue destination="4d9-YL-vtV" kind="unwind" identifier="BackToTask" unwindAction="unwindToTask:" id="BBf-ow-gBu"/>
+                        <segue destination="4d9-YL-vtV" kind="unwind" identifier="BackToPerson" unwindAction="unwindToPeople:" id="rQ6-gr-dDe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xg0-ly-2n3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="4d9-YL-vtV" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="7100" y="-654"/>
         </scene>
@@ -1271,11 +1282,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Hr-Th-ZyO"/>
-        <segue reference="Apy-AJ-CtX"/>
-        <segue reference="nAu-1a-JDr"/>
-        <segue reference="a1Z-YM-O0W"/>
-        <segue reference="frb-mg-61w"/>
+        <segue reference="YjK-Oy-Mvb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_vector" width="216" height="246"/>

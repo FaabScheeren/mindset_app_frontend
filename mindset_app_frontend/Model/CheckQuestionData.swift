@@ -26,6 +26,6 @@ struct PersonResponse: Decodable {
 }
 
 struct CheckQuestionDataResponse: Decodable {
-    var title: String
+    var title: String?
     var done: Bool
 }

@@ -20,8 +20,8 @@ struct PersonManager {
         }
             
         func savePersons(with data: [CheckQuestionData], finished: @escaping (Bool) -> ()) {
-    //        let url = URL(string: "http://localhost:4000/daily_mindset/tasks/\(Constants.currentMindsetId)")!
-            let url = URL(string: "http://localhost:4000/daily_mindset/people_to_connect/5f154da22afcd10a51718ac0")!
+            let url = URL(string: "http://localhost:4000/daily_mindset/people_to_connect/\(Constants.currentMindsetId)")!
+//            let url = URL(string: "http://localhost:4000/daily_mindset/people_to_connect/5f154da22afcd10a51718ac0")!
             //create the session object
             let session = URLSession.shared
             //now create the URLRequest object using the url object

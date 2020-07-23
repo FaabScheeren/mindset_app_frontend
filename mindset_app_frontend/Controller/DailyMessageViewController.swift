@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -15,6 +17,7 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     
     var questionManager = QuestionManager()
     var messageManager = MessageManager()
+    var isUnwind: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,14 +33,23 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
         if !textView.text.isEmpty {
             messageManager.saveMessage(data: textView.text, finished: {(succes) -> Void in
                 if(succes) {
-                    DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                    if (self.isUnwind) {
+                        DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "FromDailyMessageToOverview", sender: sender)
+                        }
+                    } else {
+                        DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                        }
                     }
                 }
             })
         } else {
             errorLabel.text = "Please fill in your daily message."
         }
+    }
+    
+    @IBAction func unwindToDailyMessage( _ seg: UIStoryboardSegue) {
     }
     
     func didUpdateQuestion(questions: [Question]) {
