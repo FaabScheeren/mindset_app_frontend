@@ -8,10 +8,15 @@
 
 import UIKit
 
+protocol CellDelegate {
+    func textViewChanged(textView: UITextView, indexOfCell index: Int)
+}
+
 class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var questionTitleLabel: UILabel!
     @IBOutlet weak var questionInputField: UITextView!
     
+    var delegate: CellDelegate?
     var textChanged: ((String) -> Void)?
     var indexOfCell: Int = 0
     var id: String = ""
@@ -26,8 +31,10 @@ class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
     }
     
     func textViewDidChange(_ textView: UITextView) {
+//        textChanged?(textView.text)
+//        mindsetAnswers[indexOfCell].answer = textView.text
         textChanged?(textView.text)
-        mindsetAnswers[indexOfCell].answer = textView.text
+        delegate?.textViewChanged(textView: textView, indexOfCell: indexOfCell)
     }
     
     override func prepareForReuse() {
