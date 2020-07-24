@@ -10,7 +10,7 @@ import UIKit
 
 var journalAnswers = [MindsetAnswersData]()
 
-class DailyJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DailyJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellDelegate {
     @IBOutlet weak var tableView: UITableView!
     var journalQuestions = [Question]()
 //    var journalQuestions = [["question": "Testing"] ["question": "Calling"]]
@@ -58,7 +58,7 @@ class DailyJournalViewController: UIViewController, UITableViewDelegate, UITable
             }
 
             DispatchQueue.main.async {
-                print("Testing")
+//                print("Testing")
                 self.tableView.reloadData()
             }
         }
@@ -80,6 +80,7 @@ class DailyJournalViewController: UIViewController, UITableViewDelegate, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "MindsetQuestionsCell", for: indexPath) as! OpenQuestionCell
+        cell.delegate = self
         
         let country = journalQuestions[indexPath.row]
         cell.questionTitleLabel?.text = country.question
@@ -97,6 +98,10 @@ class DailyJournalViewController: UIViewController, UITableViewDelegate, UITable
         }
         
         return cell
+    }
+    
+    func textViewChanged(textView: UITextView, indexOfCell: Int) {
+        journalAnswers[indexOfCell].answer = textView.text
     }
     
 //    func didUpdateQuestion(questions: [Question]) {

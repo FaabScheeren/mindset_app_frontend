@@ -16,7 +16,7 @@ var mindsetQuestions = [Question]()
 var mindsetAnswers = [MindsetAnswersData]()
 var mindsetAnswersManager = MindsetAnswersManager()
 
-class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource  {
+class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellDelegate  {
     @IBOutlet weak var tableView: UITableView!
     
     var isUnwind: Bool = false
@@ -77,6 +77,7 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCell(withIdentifier: "MindsetQuestionsCell", for: indexPath) as! OpenQuestionCell
+        cell.delegate = self
         
         let country = mindsetQuestions[indexPath.row]
         cell.questionTitleLabel?.text = country.question
@@ -94,5 +95,9 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
         }
         
         return cell
+    }
+    
+    func textViewChanged(textView: UITextView, indexOfCell: Int) {
+        mindsetAnswers[indexOfCell].answer = textView.text
     }
 }
