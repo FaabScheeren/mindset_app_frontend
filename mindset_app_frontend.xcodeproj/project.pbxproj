@@ -14,6 +14,7 @@
 		FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80C24B73CC700487AFA /* Assets.xcassets */; };
 		FA07B81024B73CC700487AFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA07B80E24B73CC700487AFA /* LaunchScreen.storyboard */; };
 		FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */; };
+		FA3D3C4324D41B490020E74C /* DailyJournalOverviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3D3C4224D41B490020E74C /* DailyJournalOverviewViewController.swift */; };
 		FA3EFA7224C58DE20093C893 /* GoalManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EFA7124C58DE20093C893 /* GoalManager.swift */; };
 		FA3EFA7424C5B0840093C893 /* CheckQuestionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA3EFA7324C5B0840093C893 /* CheckQuestionData.swift */; };
 		FA57246A24C176FC0023347A /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA57246924C176FC0023347A /* MessageData.swift */; };
@@ -33,6 +34,9 @@
 		FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31F724B840CA00350330 /* DailyMessageViewController.swift */; };
 		FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FABF31FB24B855AD00350330 /* QuestionManager.swift */; };
 		FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */; };
+		FAD7E27E24D29DE600EA8F46 /* AssesmentQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E27C24D29DE600EA8F46 /* AssesmentQuestionCell.swift */; };
+		FAD7E27F24D29DE600EA8F46 /* AssesmentQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAD7E27D24D29DE600EA8F46 /* AssesmentQuestionCell.xib */; };
+		FAD7E28124D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E28024D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift */; };
 		FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */; };
 		FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */; };
 /* End PBXBuildFile section */
@@ -47,6 +51,7 @@
 		FA07B80F24B73CC700487AFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA07B81124B73CC700487AFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA07B81724B75C2700487AFA /* DailyMindsetOverviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMindsetOverviewController.swift; sourceTree = "<group>"; };
+		FA3D3C4224D41B490020E74C /* DailyJournalOverviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyJournalOverviewViewController.swift; sourceTree = "<group>"; };
 		FA3EFA7124C58DE20093C893 /* GoalManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalManager.swift; sourceTree = "<group>"; };
 		FA3EFA7324C5B0840093C893 /* CheckQuestionData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckQuestionData.swift; sourceTree = "<group>"; };
 		FA57246924C176FC0023347A /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
@@ -66,6 +71,9 @@
 		FABF31F724B840CA00350330 /* DailyMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyMessageViewController.swift; sourceTree = "<group>"; };
 		FABF31FB24B855AD00350330 /* QuestionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
 		FAC97F4324C5BBC300D99C4D /* DailyGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyGoalViewController.swift; sourceTree = "<group>"; };
+		FAD7E27C24D29DE600EA8F46 /* AssesmentQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssesmentQuestionCell.swift; sourceTree = "<group>"; };
+		FAD7E27D24D29DE600EA8F46 /* AssesmentQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AssesmentQuestionCell.xib; sourceTree = "<group>"; };
+		FAD7E28024D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyHabitScorecardViewController.swift; sourceTree = "<group>"; };
 		FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuestionCell.swift; sourceTree = "<group>"; };
 		FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenQuestionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -119,6 +127,8 @@
 				FA07B80924B73CC500487AFA /* Main.storyboard */,
 				FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */,
 				FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */,
+				FAD7E27C24D29DE600EA8F46 /* AssesmentQuestionCell.swift */,
+				FAD7E27D24D29DE600EA8F46 /* AssesmentQuestionCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -135,6 +145,8 @@
 				FA830F2B24C6DDCC00582F2F /* DailyPeopleViewController.swift */,
 				FA830F2F24C6E76100582F2F /* DailyOverViewViewController.swift */,
 				FA9591E924C9AE5000C3EBC5 /* DailyJournalViewController.swift */,
+				FAD7E28024D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift */,
+				FA3D3C4224D41B490020E74C /* DailyJournalOverviewViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -219,6 +231,7 @@
 				FA07B80D24B73CC700487AFA /* Assets.xcassets in Resources */,
 				FA07B80B24B73CC500487AFA /* Main.storyboard in Resources */,
 				FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */,
+				FAD7E27F24D29DE600EA8F46 /* AssesmentQuestionCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,6 +251,8 @@
 				FA07B80824B73CC500487AFA /* ViewController.swift in Sources */,
 				FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */,
 				FA57246C24C179690023347A /* MessageManager.swift in Sources */,
+				FAD7E28124D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift in Sources */,
+				FAD7E27E24D29DE600EA8F46 /* AssesmentQuestionCell.swift in Sources */,
 				FA830F2624C6CF1500582F2F /* DailyTasksViewController.swift in Sources */,
 				FAC97F4424C5BBC300D99C4D /* DailyGoalViewController.swift in Sources */,
 				FA57247024C1B6350023347A /* MindsetAnswersManager.swift in Sources */,
@@ -245,6 +260,7 @@
 				FABF31F824B840CA00350330 /* DailyMessageViewController.swift in Sources */,
 				FA57246E24C1A6CA0023347A /* MindsetAnswersData.swift in Sources */,
 				FABF31FC24B855AD00350330 /* QuestionManager.swift in Sources */,
+				FA3D3C4324D41B490020E74C /* DailyJournalOverviewViewController.swift in Sources */,
 				FA9591EA24C9AE5000C3EBC5 /* DailyJournalViewController.swift in Sources */,
 				FA07B80424B73CC500487AFA /* AppDelegate.swift in Sources */,
 				FA3EFA7224C58DE20093C893 /* GoalManager.swift in Sources */,

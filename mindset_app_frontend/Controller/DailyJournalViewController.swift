@@ -9,17 +9,29 @@
 import UIKit
 
 var journalAnswers = [MindsetAnswersData]()
+var journalAnswersManager = MindsetAnswersManager()
 
-class DailyJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellDelegate {
+class DailyJournalViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, CellDelegate, MindsetManagerDelegate {
     @IBOutlet weak var tableView: UITableView!
+    
     var journalQuestions = [Question]()
-//    var journalQuestions = [["question": "Testing"] ["question": "Calling"]]
+    var isUnwind: Bool = false
+    var day: String = ""
+    var calcDay: Int = 0
     
     override func viewDidLoad() {
         let questionManager = QuestionManager()
-        
         super.viewDidLoad()
-
+        journalAnswersManager.delegate = self
+        
+        if (day == "Today") {
+            calcDay = 0
+        } else if (day == "Yesterday") {
+            calcDay = -1
+        }
+        
+        journalAnswersManager.getMindset(date: GlobalFunctions.getDate(with: calcDay))
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: "OpenQuestionCell", bundle: nil), forCellReuseIdentifier: "MindsetQuestionsCell")
@@ -62,7 +74,21 @@ class DailyJournalViewController: UIViewController, UITableViewDelegate, UITable
                 self.tableView.reloadData()
             }
         }
-        
+    }
+    
+    func didFindMindset(find: Bool) {
+//        print(find)
+        if !find {
+            let refreshAlert = UIAlertController(title: "No mindset found", message: "Please first fill in the daily mindset form before you create a journal.", preferredStyle: UIAlertController.Style.alert)
+
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { (action: UIAlertAction!) in
+                self.performSegue(withIdentifier: "unwindToDailyMindsetOverviewScreen", sender: self)
+            }))
+
+            DispatchQueue.main.async {
+                self.present(refreshAlert, animated: true, completion: nil)
+            }
+        }
     }
     
     // MARK: - Tableview
@@ -103,11 +129,27 @@ class DailyJournalViewController: UIViewController, UITableViewDelegate, UITable
     func textViewChanged(textView: UITextView, indexOfCell: Int) {
         journalAnswers[indexOfCell].answer = textView.text
     }
+
+    @IBAction func toHabbitsScorecard(_ sender: UIButton) {
+        journalAnswersManager.saveAnswers(with: journalAnswers, onQuestions: "journal", url: "evening_journal") { (succes) in
+            if (succes) {
+                if (self.isUnwind) {
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "FromJournalQuestionToJournalOverview", sender: sender)
+                    }
+                } else {
+                        DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "toHabbitsScorecardScreen", sender: sender)
+                    }
+                }
+            } else {
+                print("Error in saving journal answers.")
+            }
+        }
+    }
     
-//    func didUpdateQuestion(questions: [Question]) {
-////        DispatchQueue.main.async {
-//            print("Testing")
-//            self.tableView.reloadData()
-////        }
-//    }
+    @IBAction func unwindToJournal( _ seg: UIStoryboardSegue) {
+        isUnwind = true
+    }
+    
 }

@@ -16,6 +16,10 @@ class DailyOverViewViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     @IBAction func BackToDailyMessage(_ sender: Any) {
         performSegue(withIdentifier: "BackToDailyMessage", sender: sender)
     }
