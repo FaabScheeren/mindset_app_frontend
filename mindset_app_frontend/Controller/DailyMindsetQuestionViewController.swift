@@ -1,4 +1,4 @@
-
+    
 //  DailyMindsetQuestionViewController.swift
 //  mindset_app_frontend
 //
@@ -38,9 +38,13 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     // MARK: - Navigation
     @IBAction func saveMindsetAnswers(_ sender: UIButton) {
-        mindsetAnswersManager.saveAnswers(with: mindsetAnswers) { (succes) in
+        mindsetAnswersManager.saveAnswers(with: mindsetAnswers, onQuestions: "mindset", url: "mindset_questions") { (succes) in
             if (succes) {
                 if (self.isUnwind) {
                     DispatchQueue.main.async {

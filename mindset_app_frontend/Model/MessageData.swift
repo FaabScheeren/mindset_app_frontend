@@ -15,4 +15,10 @@ struct MessageData: Codable {
 //    var answer: String
     var _id: String?
     var today_message: String
+    var day: String?
+}
+
+struct UpdateMessageData: Codable {
+    var _id: String?
+    var today_message: String
 }

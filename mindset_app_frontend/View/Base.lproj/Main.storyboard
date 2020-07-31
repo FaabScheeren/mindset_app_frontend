@@ -1318,8 +1318,7 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <action selector="saveMindsetAnswers:" destination="DMO-l0-neG" eventType="touchUpInside" id="mqA-S7-Oua"/>
-                                                        <action selector="toNextScreen:" destination="i5I-5l-gKw" eventType="touchUpInside" id="mqk-eY-yc3"/>
+                                                        <action selector="toHabbitsScorecard:" destination="30x-nj-nCq" eventType="touchUpInside" id="e4x-AD-jKe"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1356,15 +1355,216 @@
                     <navigationItem key="navigationItem" id="tdF-CC-OwE"/>
                     <connections>
                         <outlet property="tableView" destination="gOr-Gy-wOp" id="ezS-Gq-fVh"/>
+                        <segue destination="a5X-8l-rq6" kind="show" identifier="toHabbitsScorecardScreen" id="dd6-gr-Xvh"/>
+                        <segue destination="lvp-ab-749" kind="unwind" identifier="unwindToDailyMindsetOverviewScreen" unwindAction="unwindFromEveningJournal:" id="Ukj-fl-DqY"/>
+                        <segue destination="IIe-WA-NHU" kind="show" identifier="FromJournalQuestionToJournalOverview" id="2NN-BA-0Uo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lgn-9O-b4B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="lvp-ab-749" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3362" y="-445"/>
         </scene>
+        <!--Daily Habit Scorecard View Controller-->
+        <scene sceneID="Zfd-5G-kcR">
+            <objects>
+                <viewController id="a5X-8l-rq6" customClass="DailyHabitScorecardViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="X53-gY-2Gb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily habits scorecard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xSt-Sz-CES">
+                                <rect key="frame" x="25" y="158" width="364" height="26"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZXx-tR-acY" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="199" width="414" height="613.5"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ue1-es-oyZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="613.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="Zf1-rE-XGj" userLabel="Footer View">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7wC-vL-rhI">
+                                                    <rect key="frame" x="337" y="1" width="52" height="42"/>
+                                                    <color key="backgroundColor" name="Light green"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="yMH-7C-KCy"/>
+                                                    </constraints>
+                                                    <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                                    <state key="normal" title="Next">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="GoToDailyJournalOverview:" destination="a5X-8l-rq6" eventType="touchUpInside" id="SmA-sk-Vn5"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="7wC-vL-rhI" secondAttribute="trailing" constant="25" id="36Z-0t-DU4"/>
+                                                <constraint firstItem="7wC-vL-rhI" firstAttribute="centerY" secondItem="Zf1-rE-XGj" secondAttribute="centerY" id="lPj-tA-zuh"/>
+                                                <constraint firstItem="7wC-vL-rhI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Zf1-rE-XGj" secondAttribute="leading" constant="20" symbolic="YES" id="r4M-ms-MXE"/>
+                                            </constraints>
+                                        </view>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="ue1-es-oyZ" firstAttribute="leading" secondItem="ZXx-tR-acY" secondAttribute="leading" id="O6X-tP-n2e"/>
+                                    <constraint firstAttribute="trailing" secondItem="ue1-es-oyZ" secondAttribute="trailing" id="bC2-wT-cMw"/>
+                                    <constraint firstAttribute="bottom" secondItem="ue1-es-oyZ" secondAttribute="bottom" id="eu2-oi-YPY"/>
+                                    <constraint firstItem="ue1-es-oyZ" firstAttribute="top" secondItem="ZXx-tR-acY" secondAttribute="top" id="ojR-xY-wtB"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="xSt-Sz-CES" firstAttribute="top" secondItem="953-8r-6bV" secondAttribute="top" constant="70" id="24b-1t-woI"/>
+                            <constraint firstItem="953-8r-6bV" firstAttribute="bottom" secondItem="ZXx-tR-acY" secondAttribute="bottom" constant="0.5" id="8HN-un-N3w"/>
+                            <constraint firstItem="xSt-Sz-CES" firstAttribute="leading" secondItem="953-8r-6bV" secondAttribute="leading" constant="25" id="HU0-QU-Ro4"/>
+                            <constraint firstItem="ZXx-tR-acY" firstAttribute="leading" secondItem="953-8r-6bV" secondAttribute="leading" id="YNe-ld-ShT"/>
+                            <constraint firstItem="ZXx-tR-acY" firstAttribute="trailing" secondItem="953-8r-6bV" secondAttribute="trailing" id="nGr-Br-mB2"/>
+                            <constraint firstItem="953-8r-6bV" firstAttribute="trailing" secondItem="xSt-Sz-CES" secondAttribute="trailing" constant="25" id="p20-dX-8si"/>
+                            <constraint firstItem="ZXx-tR-acY" firstAttribute="top" secondItem="xSt-Sz-CES" secondAttribute="bottom" constant="15" id="siP-gg-EUN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="953-8r-6bV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="nTW-xm-5p1"/>
+                    <connections>
+                        <outlet property="tableView" destination="ue1-es-oyZ" id="BmA-YX-7uj"/>
+                        <segue destination="IIe-WA-NHU" kind="show" identifier="toDailyJournalOverviewScreen" id="euS-vE-EAz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zFx-KD-V0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4109" y="-445"/>
+        </scene>
+        <!--Daily Journal Overview View Controller-->
+        <scene sceneID="1S6-sS-MaN">
+            <objects>
+                <viewController id="IIe-WA-NHU" customClass="DailyJournalOverviewViewController" customModule="mindset_app_frontend" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GmK-FO-NpF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mindset overview" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wbB-ro-eBd">
+                                <rect key="frame" x="25" y="158" width="364" height="77"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="153-52-kTm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="21"/>
+                                <color key="textColor" red="0.43921568630000002" green="0.43921568630000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="17" translatesAutoresizingMaskIntoConstraints="NO" id="wfx-Fi-HVR" userLabel="Buttons">
+                                <rect key="frame" x="25" y="290" width="364" height="127"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2GX-gg-OwP">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="Z9C-YO-FXS"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Journal questions"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BackToDailyMessage:" destination="r8T-TG-J0e" eventType="touchUpInside" id="WiB-xx-OA1"/>
+                                            <action selector="BackToJournal:" destination="IIe-WA-NHU" eventType="touchUpInside" id="zna-Q0-VMc"/>
+                                            <action selector="goToDailyMindset:" destination="MGF-R1-8a3" eventType="touchUpInside" id="0DM-bK-JQQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fza-U3-SVx">
+                                        <rect key="frame" x="0.0" y="72" width="364" height="55"/>
+                                        <color key="backgroundColor" name="Light green"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="I7v-Cu-Xmc"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Daily habits scorecard"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="BackToDailyMindset:" destination="r8T-TG-J0e" eventType="touchUpInside" id="gye-0z-Utn"/>
+                                            <action selector="BackToScorecard:" destination="IIe-WA-NHU" eventType="touchUpInside" id="5Po-QE-lJI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="he7-zL-Fnh">
+                                <rect key="frame" x="333" y="459.5" width="61" height="38"/>
+                                <color key="backgroundColor" name="Light green"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Finish">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="BackToHome:" destination="IIe-WA-NHU" eventType="touchUpInside" id="CNE-0l-PwV"/>
+                                    <action selector="backToHome:" destination="r8T-TG-J0e" eventType="touchUpInside" id="8AX-wQ-XoJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wbB-ro-eBd" firstAttribute="top" secondItem="xCo-gE-9fJ" secondAttribute="top" constant="70" id="7MH-Hn-4Yh"/>
+                            <constraint firstItem="wfx-Fi-HVR" firstAttribute="top" secondItem="wbB-ro-eBd" secondAttribute="bottom" constant="55" id="7aa-vm-2hY"/>
+                            <constraint firstItem="xCo-gE-9fJ" firstAttribute="trailing" secondItem="wfx-Fi-HVR" secondAttribute="trailing" constant="25" id="TfM-7H-rcU"/>
+                            <constraint firstItem="he7-zL-Fnh" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="xCo-gE-9fJ" secondAttribute="leading" symbolic="YES" id="Ziu-SK-mAO"/>
+                            <constraint firstItem="wbB-ro-eBd" firstAttribute="leading" secondItem="xCo-gE-9fJ" secondAttribute="leading" constant="25" id="gpH-vL-4jr"/>
+                            <constraint firstItem="wfx-Fi-HVR" firstAttribute="leading" secondItem="xCo-gE-9fJ" secondAttribute="leading" constant="25" id="hJI-fd-VCY"/>
+                            <constraint firstItem="xCo-gE-9fJ" firstAttribute="trailing" secondItem="he7-zL-Fnh" secondAttribute="trailing" constant="20" id="rCm-fU-laP"/>
+                            <constraint firstItem="xCo-gE-9fJ" firstAttribute="trailing" secondItem="wbB-ro-eBd" secondAttribute="trailing" constant="25" id="vM7-SG-sxI"/>
+                            <constraint firstItem="he7-zL-Fnh" firstAttribute="top" secondItem="wfx-Fi-HVR" secondAttribute="bottom" constant="42.5" id="wCi-0P-vsI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="xCo-gE-9fJ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2ct-Yj-6H7"/>
+                    <connections>
+                        <segue destination="DIE-OE-5nG" kind="unwind" identifier="backToJournal" unwindAction="unwindToJournal:" id="S05-xp-QIM"/>
+                        <segue destination="DIE-OE-5nG" kind="unwind" identifier="backToScorecard" unwindAction="unwindToScorecard:" id="7Gl-4R-LfR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zYS-Es-ChS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="DIE-OE-5nG" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="4877" y="-445"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Bmo-Wk-DCB"/>
+        <segue reference="2NN-BA-0Uo"/>
+        <segue reference="YjK-Oy-Mvb"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Logo_vector" width="216" height="246"/>

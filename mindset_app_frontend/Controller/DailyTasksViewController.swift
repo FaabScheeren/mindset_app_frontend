@@ -30,6 +30,10 @@ class DailyTasksViewController: UIViewController {
         Tasks.append(CheckQuestionData(title: "", done: false))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     @IBAction func ToPersonScreen(_ sender: UIButton) {
         print("Tasks: \(Tasks)")
         taskManager.saveTask(with: Tasks) { (succes) in

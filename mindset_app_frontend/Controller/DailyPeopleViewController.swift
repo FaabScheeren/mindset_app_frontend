@@ -29,6 +29,10 @@ class DailyPeopleViewController: UIViewController {
         Persons.append(CheckQuestionData(title: "", done: false))
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     @IBAction func GoToDailyOverviewScreen(_ sender: Any) {
         print("Tasks: \(Tasks)")
             personManager.savePersons(with: Persons) { (succes) in

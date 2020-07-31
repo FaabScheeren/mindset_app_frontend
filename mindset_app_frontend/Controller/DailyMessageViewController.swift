@@ -18,6 +18,7 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     var questionManager = QuestionManager()
     var messageManager = MessageManager()
     var isUnwind: Bool = false
+    var day: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,32 +31,48 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
                 print("Error")
             }
         }
+    }
     
-//        textView.isScrollEnabled = false
-//        resize(textView: textView)
-        }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.isHidden = true
+    }
     
     @IBAction func toNextScreen(_ sender: UIButton) {
         if !textView.text.isEmpty {
-            messageManager.saveMessage(data: textView.text, finished: {(succes) -> Void in
-                if(succes) {
-                    if (self.isUnwind) {
+            if (self.isUnwind) {
+                messageManager.updateMessage(with: textView.text, finished: {(succes) -> Void in
+                    if(succes) {
                         DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "FromDailyMessageToOverview", sender: sender)
+                            self.performSegue(withIdentifier: "FromDailyMessageToOverview", sender: sender)
                         }
                     } else {
-                        DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
-                        }
+                        //                errorLabel.text = "Something went wrong sorry."
+                        print("Error")
                     }
-                }
-            })
+                })
+            } else {
+                messageManager.saveMessage(data: textView.text, day: day, finished: {(succes) -> Void in
+                    if(succes) {
+                        DispatchQueue.main.async {
+                            self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                        }
+                    } else {
+                        //                errorLabel.text = "Something went wrong sorry."
+                        print("Error")
+                    }
+                })
+            }
+            
         } else {
             errorLabel.text = "Please fill in your daily message."
         }
     }
     
+    
+    
     @IBAction func unwindToDailyMessage( _ seg: UIStoryboardSegue) {
+        isUnwind = true
     }
     
     func didUpdateQuestion(questions: [Question]) {

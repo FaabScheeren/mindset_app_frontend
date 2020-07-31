@@ -30,6 +30,10 @@ class DailyGoalViewController: UIViewController, UITextViewDelegate {
         Goals.append(CheckQuestionData(title: "", done: false))
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = true
+    }
+    
     @IBAction func ToTaskScreen(_ sender: Any) {
         print("Goals: \(Goals)")
         goalManager.saveGoal(with: Goals) { (succes) in
