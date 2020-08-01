@@ -26,7 +26,7 @@ struct MindsetAnswersManager {
     }
     
     func saveAnswers(with data: [MindsetAnswersData], onQuestions: String, url parameter: String, finished: @escaping (Bool) -> ()) {
-        let url = URL(string: "http://localhost:4000/daily_mindset/\(parameter)/\(Constants.currentMindsetId)")
+        let url = URL(string: "\(Constants.baseURL)/daily_mindset/\(parameter)/\(Constants.currentMindsetId)")
         //        let url = URL(string: "http://localhost:4000/daily_mindset/\(parameter)/5f1fdf03c103cd2f9f0f557c")
         guard let requestUrl = url else {fatalError()}
         var request = URLRequest(url: requestUrl)
@@ -73,7 +73,7 @@ struct MindsetAnswersManager {
     
     func saveHabits(with data: [HabitsScorecardAnswers], url parameter: String, finished: @escaping (Bool) -> ()) {
         print(Constants.currentMindsetId)
-        let url = URL(string: "http://localhost:4000/daily_mindset/\(parameter)/\(Constants.currentMindsetId)")
+        let url = URL(string: "\(Constants.baseURL)/daily_mindset/\(parameter)/\(Constants.currentMindsetId)")
         //        let url = URL(string: "http://localhost:4000/daily_mindset/\(parameter)/5f1fdf03c103cd2f9f0f557c")
         guard let requestUrl = url else {fatalError()}
         var request = URLRequest(url: requestUrl)
@@ -105,7 +105,7 @@ struct MindsetAnswersManager {
     
     func getMindset(date: String) {
         print("The date is: \(date)")
-        let url = URL(string: "http://localhost:4000/daily_mindset/\(Constants.userId)/\(date)")
+        let url = URL(string: "\(Constants.baseURL)/daily_mindset/\(Constants.userId)/\(date)")
         guard let requestUrl = url else {fatalError()}
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "GET"
