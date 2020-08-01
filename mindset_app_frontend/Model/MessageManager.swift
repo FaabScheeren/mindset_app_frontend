@@ -34,7 +34,7 @@ struct MessageManager {
     
     
     func saveMessage(data: String, day: String, finished: @escaping (Bool)->()) {
-        let url = URL(string: "http://localhost:4000/daily_mindset/today_message")
+        let url = URL(string: "\(Constants.baseURL)/daily_mindset/today_message")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "POST"
@@ -66,7 +66,7 @@ struct MessageManager {
     }
     
     func updateMessage(with data: String, finished: @escaping (Bool) -> ()) {
-        let url = URL(string: "http://localhost:4000/daily_mindset/today_message/\(Constants.currentMindsetId)")
+        let url = URL(string: "\(Constants.baseURL)/daily_mindset/today_message/\(Constants.currentMindsetId)")
         guard let requestUrl = url else {fatalError()}
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "PUT"

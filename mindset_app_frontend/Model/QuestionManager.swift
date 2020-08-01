@@ -29,7 +29,7 @@ struct QuestionManager {
     }
     
     func getQuestions(finished: @escaping (Bool) -> ()) {
-        let url = URL(string: "http://localhost:4000/questions")
+        let url = URL(string: "\(Constants.baseURL)/questions")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
         request.httpMethod = "GET"
