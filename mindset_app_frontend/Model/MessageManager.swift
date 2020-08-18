@@ -33,7 +33,7 @@ struct MessageManager {
     }
     
     
-    func saveMessage(data: String, day: String, finished: @escaping (Bool)->()) {
+    func saveMessage(data: String, day: String, completion: @escaping (Int)->()) {
         let url = URL(string: "\(Constants.baseURL)/daily_mindset/today_message")
         guard let requestUrl = url else { fatalError() }
         var request = URLRequest(url: requestUrl)
@@ -44,15 +44,34 @@ struct MessageManager {
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         
         let jsonData = encodeJSON(with: data, day: day)
-        
         request.httpBody = jsonData
         
         let task = URLSession.shared.dataTask(with: request) { (data, response, error) in
-            if let error = error {
-                print("Error took place \(error)")
+            if error != nil {
+                completion(700)
                 return
             }
-            guard let data = data else {return}
+            
+            guard let response = response as? HTTPURLResponse else {
+                completion(701)
+                return
+            }
+
+            guard (200...299).contains(response.statusCode) else {
+                completion(response.statusCode)
+                return
+            }
+            
+            guard let mime = response.mimeType, mime == "application/json" else {
+                completion(702)
+                return
+            }
+            
+            guard let data = data else {
+                completion(703)
+                return
+            }
+            
             do {
                 let todoItemModel = try JSONDecoder().decode(MessageData.self, from: data)
                 Constants.currentMindsetId = todoItemModel._id!
@@ -60,7 +79,7 @@ struct MessageManager {
             } catch let jsonErr{
                 print(jsonErr)
             }
-            finished(true)
+            completion(response.statusCode)
         }
         task.resume()
     }

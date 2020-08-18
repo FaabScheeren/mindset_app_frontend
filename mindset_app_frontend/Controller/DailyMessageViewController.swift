@@ -54,15 +54,26 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
                     }
                 })
             } else {
-                messageManager.saveMessage(data: textView.text, day: day, finished: {(succes) -> Void in
-                    if(succes) {
-                        DispatchQueue.main.async {
-                            self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                messageManager.saveMessage(data: textView.text, day: day, completion: {(statusCode: Int) -> Void in
+//                    if(finished) {
+                        if (200...299).contains(statusCode) {
+                            DispatchQueue.main.async {
+                                self.performSegue(withIdentifier: "ToDailyMindsetScreen", sender: sender)
+                            }
+                        } else if (400...499).contains(statusCode) {
+                            DispatchQueue.main.async {
+                                self.errorLabel.text = "Please make sure you filled in the all the required fields."
+                            }
+                        } else if (500...599).contains(statusCode) {
+                            DispatchQueue.main.async {
+                                self.errorLabel.text = "Sorry, couldn't reach our server."
+                            }
+                        } else if (700...).contains(statusCode) {
+                            DispatchQueue.main.async {
+                                self.errorLabel.text = "Sorry, something went wrong. Try again later."
+                            }
                         }
-                    } else {
-                        //                errorLabel.text = "Something went wrong sorry."
-                        print("Error")
-                    }
+//                    }
                 })
             }
             
@@ -90,3 +101,4 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
 //        newFrame.size = CGSize(width: width, height: newSize.height)
 //        textView.frame = newFrame
 //    }
+
