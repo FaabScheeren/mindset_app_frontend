@@ -103,6 +103,7 @@ struct MindsetAnswersManager {
         task.resume()
     }
     
+//    Fetch one specific mindset of the current logged in user and date.
     func getMindset(date: String) {
         print("The date is: \(date)")
         let url = URL(string: "\(Constants.baseURL)/daily_mindset/\(Constants.userId)/\(date)")
@@ -124,7 +125,7 @@ struct MindsetAnswersManager {
                 let savedAnswers = try JSONDecoder().decode(MindsetData.self, from: data)
                 //                print("Response data:\n \(savedAnswers)")
                 if let id = savedAnswers.id {
-                    //                    print(id)
+//                    print(id)
                     Constants.currentMindsetId = id
                     DispatchQueue.main.async {
                         self.delegate?.didFindMindset(find: true)

@@ -25,14 +25,14 @@ class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
         super.awakeFromNib()
         questionInputField.delegate = self
     }
+
+    
     
     func textChanged(action: @escaping (String) -> Void) {
         self.textChanged = action
     }
     
     func textViewDidChange(_ textView: UITextView) {
-//        textChanged?(textView.text)
-//        mindsetAnswers[indexOfCell].answer = textView.text
         textChanged?(textView.text)
         delegate?.textViewChanged(textView: textView, indexOfCell: indexOfCell)
     }
@@ -42,6 +42,6 @@ class OpenQuestionCell: UITableViewCell, UITextViewDelegate {
         
         // reset (hide) the checkmark label
         self.questionInputField.text = ""
-
     }
 }
+

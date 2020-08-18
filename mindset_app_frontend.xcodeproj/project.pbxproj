@@ -39,6 +39,7 @@
 		FAD7E28124D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAD7E28024D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift */; };
 		FADC82C424C03435000E6F47 /* OpenQuestionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */; };
 		FADC82C524C03435000E6F47 /* OpenQuestionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */; };
+		FAFBAB5924EA7A3800FDD7C4 /* ZeroPaddingTextview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFBAB5824EA7A3800FDD7C4 /* ZeroPaddingTextview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		FAD7E28024D2A3B000EA8F46 /* DailyHabitScorecardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyHabitScorecardViewController.swift; sourceTree = "<group>"; };
 		FADC82C224C03435000E6F47 /* OpenQuestionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenQuestionCell.swift; sourceTree = "<group>"; };
 		FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenQuestionCell.xib; sourceTree = "<group>"; };
+		FAFBAB5824EA7A3800FDD7C4 /* ZeroPaddingTextview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZeroPaddingTextview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				FADC82C324C03435000E6F47 /* OpenQuestionCell.xib */,
 				FAD7E27C24D29DE600EA8F46 /* AssesmentQuestionCell.swift */,
 				FAD7E27D24D29DE600EA8F46 /* AssesmentQuestionCell.xib */,
+				FAFBAB5824EA7A3800FDD7C4 /* ZeroPaddingTextview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 				FA830F2E24C6E21C00582F2F /* PersonManager.swift in Sources */,
 				FA3EFA7424C5B0840093C893 /* CheckQuestionData.swift in Sources */,
 				FA830F2824C6D45D00582F2F /* TaskManager.swift in Sources */,
+				FAFBAB5924EA7A3800FDD7C4 /* ZeroPaddingTextview.swift in Sources */,
 				FA07B80824B73CC500487AFA /* ViewController.swift in Sources */,
 				FA07B81824B75C2700487AFA /* DailyMindsetOverviewController.swift in Sources */,
 				FA57246C24C179690023347A /* MessageManager.swift in Sources */,

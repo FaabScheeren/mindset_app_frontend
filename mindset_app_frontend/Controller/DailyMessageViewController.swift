@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,7 +20,7 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         questionManager.delegate = self
         questionManager.getQuestions() {(succes) in
             if (succes) {
@@ -31,12 +29,16 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
                 print("Error")
             }
         }
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
     }
+
     
     @IBAction func toNextScreen(_ sender: UIButton) {
         if !textView.text.isEmpty {
@@ -68,8 +70,6 @@ class DailyMessageViewController: UIViewController, QuestionManagerDelegate {
             errorLabel.text = "Please fill in your daily message."
         }
     }
-    
-    
     
     @IBAction func unwindToDailyMessage( _ seg: UIStoryboardSegue) {
         isUnwind = true

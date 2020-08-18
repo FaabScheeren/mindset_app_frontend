@@ -28,7 +28,7 @@ struct QuestionData: Decodable {
 
 struct HabitsScorecardAnswers: Codable {
     var question: String
-    var assesment : Int
+    var assesment: Int
 }
 
 struct MindsetData: Codable {

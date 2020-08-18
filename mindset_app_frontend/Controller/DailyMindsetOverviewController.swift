@@ -49,11 +49,9 @@ class DailyMindsetOverviewController: UIViewController, UIPickerViewDelegate, UI
     func showPickerInActionSheet(sentBy: String) {
         let title = "Choose your day"
         let message = ""
-//        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert);
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.actionSheet);
         let height:NSLayoutConstraint = NSLayoutConstraint(item: alert.view!, attribute: NSLayoutConstraint.Attribute.height, relatedBy: NSLayoutConstraint.Relation.equal, toItem: nil, attribute: NSLayoutConstraint.Attribute.notAnAttribute, multiplier: 1, constant: 250)
         alert.view.addConstraint(height)
-//        alert.isModalInPopover = true;
         
         let newWidth = UIScreen.main.bounds.width * 0.88
         let marginLeft = newWidth - 117
