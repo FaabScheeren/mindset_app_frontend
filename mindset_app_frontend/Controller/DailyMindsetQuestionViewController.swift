@@ -36,10 +36,28 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
             let answer = MindsetAnswersData(question: question._id, answer: "")
             mindsetAnswers.append(answer)
         }
-    }
+        
+        let tap = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tap)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardDidShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+   }
     
     override func viewWillAppear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = true
+    }
+    
+    @objc func keyboardWillShow(_ notification:Notification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: (keyboardSize.height + 75), right: 0)
+        }
+    }
+    
+    @objc func keyboardWillHide(_ notification:Notification) {
+        if ((notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue) != nil {
+            tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        }
     }
     
     // MARK: - Navigation
@@ -65,7 +83,7 @@ class DailyMindsetQuestionViewController: UIViewController, UITableViewDelegate,
     @IBAction func unwindToDailyMindset( _ seg: UIStoryboardSegue) {
         isUnwind = true
     }
-
+    
     // MARK: - Tableview
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         self.viewWillLayoutSubviews()
