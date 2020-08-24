@@ -11,8 +11,8 @@ import Foundation
 struct Constants {
     static var currentMindsetId = ""
     static var userId = "5f05c3fa88fc936e61e1ef0c"
-    static var baseURL = "https://mindset-app.herokuapp.com"
-//    static var baseURL = "http://localhost:4000"
+//    static var baseURL = "https://mindset-app.herokuapp.com"
+    static var baseURL = "http://localhost:4000"
 }
 
 struct GlobalFunctions {
